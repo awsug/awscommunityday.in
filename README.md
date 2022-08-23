@@ -1,2 +1,1 @@
-# awscommunityday.in
-The AWS Community Day India website
+# AWS Community Day India, Virtual Edition - 2022
