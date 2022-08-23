@@ -1,0 +1,27 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  serverless-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+      AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+      BUCKET_NAME: ${{secrets.BUCKET_NAME}}
+      CDN_ID: ${{secrets.CDN_ID}}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy website
+        if: github.ref == 'refs/heads/main'
+        run: |
+          pip install awscli
+          aws s3 cp ./ s3://$BUCKET_NAME/ --recursive --include "*"
+          aws cloudfront create-invalidation --distribution-id $CDN_ID --paths "/*"
+
