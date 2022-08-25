@@ -251,7 +251,7 @@ $(function () {
             organisation,
             "country_code": "in",
             "dial_code": "+91",
-            "phone_number": phone,
+            "phone_number": $('#phone_number').val(),
             "whatsapp_number": phone,
             "country": "India",
             "custom_forms": {
@@ -341,7 +341,6 @@ $(function () {
       }
     }).fail((er) => {
       $("#phoneError").show()
-
     });
   });
 });
