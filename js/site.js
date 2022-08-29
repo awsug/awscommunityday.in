@@ -203,6 +203,19 @@ $(function () {
     cb.val(cb.prop('checked'));
   });
 
+  //For UTM Parameters
+  let utmParams = null;
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const utmParametersObj = Object.fromEntries(urlSearchParams.entries());
+  if (
+    utmParametersObj.hasOwnProperty("utm_source") ||
+    utmParametersObj.hasOwnProperty("utm_medium") ||
+    utmParametersObj.hasOwnProperty("utm_campaign")
+  ) {
+    utmParams = utmParametersObj;
+    // console.log(utmParams);
+  }
+
   const onFormSubmit = event => {
     event.preventDefault();
     if (!isEmailValid || !isPhoneNumberValid) {
@@ -218,22 +231,12 @@ $(function () {
     var consent = document.getElementById("idChk-normal").value;
     var trainingCloud = document.getElementById("training-check").value;
     var otherConsent = document.getElementById("konf-aws").value;
-
-    let utm = {};
-    if (location.search) {
-      const urlParams = new URLSearchParams(location.search);
-      for (const [key, value] of urlParams) {
-        utm[key] = value;
-      }
-    } else {
-      utm = undefined
-    }
-    console.log(utm);
+    
     var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
 
     let dataBody = {
       event_id,
-      "utm": {},
+      "utm": utmParams,
       "consents": {
         is_subscriber: Boolean(trainingCloud),
         consent_to_organiser: Boolean(consent),
@@ -262,9 +265,9 @@ $(function () {
       }
     };
 
-    if (location.search) {
-      dataBody['utm'] = utm
-    }
+    // if (location.search) {
+    //   dataBody['utm'] = utm
+    // }
 
     if (phone.length <= 13) {
       const settings = {
