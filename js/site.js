@@ -312,38 +312,41 @@ $(function () {
 
   $('#email').change((ev) => {
     const url = `${konfHubValidateUrl}?event_id=${event_id}&ticket_id=${ticket_id}&email_id=${ev.currentTarget.value}`;
-
     let message = '';
     isEmailValid = false;
-
-    $.get(url, ({ email_status }) => {
-      if ((email_status === 1) || (email_status === 3)) {
-        isEmailValid = true;
-      } else if (email_status === 8) {
-        message = 'The email is either already registered. Please use a different email to register.';
-      } else {
-        message = "The email is invalid.";
+    $.get(url, () => {
+      $("#emailStatus").hide()
+      isEmailValid = true;
+    }).fail((err) => {
+      $("#emailStatus").show();
+      if(err.responseJSON.email_status == 8){
+        message= "Another registration with the same email address exists. Please use another email address."
+      }
+      else{
+        message = "The email address provided doesn't seem to be valid. Please enter a valid one."
       }
       $("#emailStatus").html(message);
-    }).fail(() => {
-      $("#emailStatus").html("The email is invalid.")
     });
+
   });
 
   $('#phone_number').change((ev) => {
     const url = `${konfHubValidateUrl}?event_id=${event_id}&ticket_id=${ticket_id}&dial_code=${$('.iti__selected-dial-code').html().split('+')[1]}&phone_number=${ev.currentTarget.value}`;
-
+    message="";
     isPhoneNumberValid = false;
 
-    $.get(url, ({ phone_number_status }) => {
-      if (phone_number_status === 1) {
-        isPhoneNumberValid = true;
-        $("#phoneError").hide()
-      } else {
-        $("#phoneError").show()
-      }
+    $.get(url, () => {
+      $("#phoneError").hide()
+      isPhoneNumberValid = true;
     }).fail((er) => {
-      $("#phoneError").show()
+      $("#phoneError").show();
+      if(er.responseJSON.phone_number_status ===3){
+        message = "Another registration with the same phone number exists. Please use another phone number."
+      }
+      else{
+        message = "The phone number provided doesn't seem to be valid. Please enter a valid one"
+      }
+      $("#phoneError").html(message);
     });
   });
 });
