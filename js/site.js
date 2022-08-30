@@ -234,6 +234,20 @@ $(function () {
     
     var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
 
+    //referral params
+    // let referredBy = null;
+    // let referralMode = null;
+
+    // let url_string = window.location.href;
+    // let referral_url = new URL(url_string);
+    // if (referral_url.searchParams.has("referred_by")) {
+    //   referredBy = referral_url.searchParams.get("referred_by");
+    //   referralMode = referral_url.searchParams.get("referral_mode");
+    // } else {
+    //   referredBy = null;
+    //   referralMode = null;
+    // }
+
     let dataBody = {
       event_id,
       "utm": utmParams,
@@ -248,15 +262,18 @@ $(function () {
       "registration_details": {
         "6176": [
           {
-            name,
+            "name":name,
             "email_id": email,
-            designation,
-            organisation,
+            "designation": designation,
+            "organisation":organisation,
             "country_code": "in",
             "dial_code": "+91",
             "phone_number": $('#phone_number').val(),
             "whatsapp_number": phone,
             "country": "India",
+            "referred_by": referredBy,
+            "referral_mode": referralMode,
+            "referral_campaign_id": 2132,
             "custom_forms": {
               "16796": city
             },

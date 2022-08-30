@@ -50,9 +50,8 @@
     gtag('js', new Date());
     gtag('config', 'UA-171268306-1');
   </script>
-  <!-- Comment out this line to requrire side sharethis-inline-share-buttons -->
-  <!-- <script type="text/javascript"
-    src="//platform-api.sharethis.com/js/sharethis.js#property=5b63095a78eb8b00113e362f&product=inline-share-buttons"></script> -->
+  <!-- This line is required for side sharethis-inline-share-buttons -->
+  <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=630e27bafd193a0013760206&product=sticky-share-buttons"></script>
   <link rel="manifest" href="/manifest.json" />
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
   <script>
@@ -198,11 +197,11 @@
           <!-- <li>
             <a href="https://communityday.awsug.in/2018" target="_blank">Community Day 2018</a>
           </li> -->
-          <!-- <li>
+          <li>
             <a href="#subscribe" id="sub-button" class="sub-button">
               <i class="icon large ion-md-notifications-outline"></i>
             </a>
-          </li> -->
+          </li>
         </ul>
       </div>
     </div>
@@ -1877,13 +1876,13 @@
       </div>
     </div>
     <div class="section section-7" id="subscribe">
-      <!-- <div class="container">
+      <div class="container">
         <div class="sponsors">
           <div class="foot-fk">
             <h4 class="main-heading-ttl">SHOW YOUR INTEREST</h4>
             <div class="row flex-it vcenter">
               <div class="col-md-12">
-                sharing buttons
+                <!-- sharing buttons -->
                 <div class="sharethis-inline-share-buttons"></div>
               </div>
             </div>
@@ -1892,7 +1891,7 @@
             </p>
           </div>
         </div>
-      </div>-->
+      </div>
     </div>
 
   </div>
@@ -1951,6 +1950,20 @@
                     class="text-danger">*</span></span></label>
               <span style="color: red" id="emailStatus"></span>
             </div>
+
+            <!-- <div class="group">
+              <button id="otp-button" type="button" onclick="myOtp()" style="margin-bottom: 10px; width: 100%;">Send OTP</button>
+              <div>
+                <input name="otp" placeholder="OTP*" type="text" maxlength="4" id="form-reg-otp" style="margin: 5px 0px;" required>
+                
+                <p id="otp_error"></p> 
+                <button id="otp-verify-button" onclick="validateOtp()" style="margin-top:10px">Verify</button>
+                <p id="otp_2_error"></p>
+              </div>
+  
+              
+            </div> -->
+
             <div class="group">
               <input type="text" name="designation" id="designation" required>
               <span class="highlight"></span>
