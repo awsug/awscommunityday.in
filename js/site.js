@@ -203,6 +203,19 @@ $(function () {
     cb.val(cb.prop('checked'));
   });
 
+  //For UTM Parameters
+  let utmParams = null;
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const utmParametersObj = Object.fromEntries(urlSearchParams.entries());
+  if (
+    utmParametersObj.hasOwnProperty("utm_source") ||
+    utmParametersObj.hasOwnProperty("utm_medium") ||
+    utmParametersObj.hasOwnProperty("utm_campaign")
+  ) {
+    utmParams = utmParametersObj;
+    // console.log(utmParams);
+  }
+
   const onFormSubmit = event => {
     event.preventDefault();
     if (!isEmailValid || !isPhoneNumberValid) {
@@ -218,22 +231,12 @@ $(function () {
     var consent = document.getElementById("idChk-normal").value;
     var trainingCloud = document.getElementById("training-check").value;
     var otherConsent = document.getElementById("konf-aws").value;
-
-    let utm = {};
-    if (location.search) {
-      const urlParams = new URLSearchParams(location.search);
-      for (const [key, value] of urlParams) {
-        utm[key] = value;
-      }
-    } else {
-      utm = undefined
-    }
-    console.log(utm);
+    
     var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
 
     let dataBody = {
       event_id,
-      "utm": {},
+      "utm": utmParams,
       "consents": {
         is_subscriber: Boolean(trainingCloud),
         consent_to_organiser: Boolean(consent),
@@ -262,9 +265,9 @@ $(function () {
       }
     };
 
-    if (location.search) {
-      dataBody['utm'] = utm
-    }
+    // if (location.search) {
+    //   dataBody['utm'] = utm
+    // }
 
     if (phone.length <= 13) {
       const settings = {
@@ -309,38 +312,41 @@ $(function () {
 
   $('#email').change((ev) => {
     const url = `${konfHubValidateUrl}?event_id=${event_id}&ticket_id=${ticket_id}&email_id=${ev.currentTarget.value}`;
-
     let message = '';
     isEmailValid = false;
-
-    $.get(url, ({ email_status }) => {
-      if ((email_status === 1) || (email_status === 3)) {
-        isEmailValid = true;
-      } else if (email_status === 8) {
-        message = 'The email is either already registered. Please use a different email to register.';
-      } else {
-        message = "The email is invalid.";
+    $.get(url, () => {
+      $("#emailStatus").hide()
+      isEmailValid = true;
+    }).fail((err) => {
+      $("#emailStatus").show();
+      if(err.responseJSON.email_status == 8){
+        message= "Another registration with the same email address exists. Please use another email address."
+      }
+      else{
+        message = "The email address provided doesn't seem to be valid. Please enter a valid one."
       }
       $("#emailStatus").html(message);
-    }).fail(() => {
-      $("#emailStatus").html("The email is invalid.")
     });
+
   });
 
   $('#phone_number').change((ev) => {
     const url = `${konfHubValidateUrl}?event_id=${event_id}&ticket_id=${ticket_id}&dial_code=${$('.iti__selected-dial-code').html().split('+')[1]}&phone_number=${ev.currentTarget.value}`;
-
+    message="";
     isPhoneNumberValid = false;
 
-    $.get(url, ({ phone_number_status }) => {
-      if (phone_number_status === 1) {
-        isPhoneNumberValid = true;
-        $("#phoneError").hide()
-      } else {
-        $("#phoneError").show()
-      }
+    $.get(url, () => {
+      $("#phoneError").hide()
+      isPhoneNumberValid = true;
     }).fail((er) => {
-      $("#phoneError").show()
+      $("#phoneError").show();
+      if(er.responseJSON.phone_number_status ===3){
+        message = "Another registration with the same phone number exists. Please use another phone number."
+      }
+      else{
+        message = "The phone number provided doesn't seem to be valid. Please enter a valid one"
+      }
+      $("#phoneError").html(message);
     });
   });
 });
