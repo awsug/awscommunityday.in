@@ -271,9 +271,9 @@ $(function () {
             "phone_number": $('#phone_number').val(),
             "whatsapp_number": phone,
             "country": "India",
-            "referred_by": referredBy,
-            "referral_mode": referralMode,
-            "referral_campaign_id": 2132,
+            // "referred_by": referredBy,
+            // "referral_mode": referralMode,
+            // "referral_campaign_id": 2132,
             "custom_forms": {
               "16796": city
             },
