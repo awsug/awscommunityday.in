@@ -47,7 +47,7 @@ const showAndHideValueSuccess = (key, msg) => {
       var latt = parseFloat($(this).attr("data-lat"));
       var lngg = parseFloat($(this).attr("data-lng"));
       var labb = $(this).attr("data-label");
-      console.log(latt + " - " + lngg);
+      // console.log(latt + " - " + lngg);
       setCoords(latt, lngg, labb);
     });
     $(document).on("click", "#toggle", function () {
@@ -428,7 +428,7 @@ const showAndHideValueSuccess = (key, msg) => {
       };
 
       document.getElementById("register-btn").disabled = true;
-      console.log("hello");
+      
       $.ajax(settings).done(function (response) {
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
