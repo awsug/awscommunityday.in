@@ -3,9 +3,15 @@ $(function () {
   const ticket_id = '6176';
   const konfHubValidateUrl = 'https://api.konfhub.com/v2/validate';
   const konfHubFormSubmitUrl = 'https://api.konfhub.com/event/capture/v2';
+  const eventName = 'AWS Community Day India - Virtual Edition 2022';
   let isEmailValid = false;
   let isPhoneNumberValid = false;
-
+  // if(window.location.href.includes("referred_by")){
+    
+  // }
+  const otp_button = document.getElementById("otp-button");
+  const otp_input = document.getElementById("form-reg-otp");
+  const otp_verify_button = document.getElementById("otp-verify-button");
   tableScroll();
 
   if ($(window).width() < 996) {
@@ -21,6 +27,17 @@ $(function () {
     );
   });
 
+  // Show and Hide the Errors for inputs
+const showAndHideValueError = (key, msg) => {
+  $(`#${key}`).html(msg).css("color", "red");
+  // document.getElementById("name-empty").style.border = "1px solid red !important"
+};
+//Show and Hide the success for inputs
+const showAndHideValueSuccess = (key, msg) => {
+  $(`#${key}`).html(msg).css("color", "green");
+  // document.getElementById("name-empty").style.border = "1px solid red !important"
+};
+
   $(function () {
     $(document).on("click", ".ven", function () {
       $(this)
@@ -30,7 +47,7 @@ $(function () {
       var latt = parseFloat($(this).attr("data-lat"));
       var lngg = parseFloat($(this).attr("data-lng"));
       var labb = $(this).attr("data-label");
-      console.log(latt + " - " + lngg);
+      // console.log(latt + " - " + lngg);
       setCoords(latt, lngg, labb);
     });
     $(document).on("click", "#toggle", function () {
@@ -171,21 +188,6 @@ $(function () {
   const phoneNumber = document.querySelector("#phone_number")
 
   var iti = window.intlTelInput(phoneNumber, {
-    // allowDropdown: false,
-    // autoHideDialCode: false,
-    // autoPlaceholder: "off",
-    // dropdownContainer: document.body,
-    // excludeCountries: ["us"],
-    // formatOnDisplay: false,
-    // geoIpLookup: function(callback) {
-    //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-    //     var countryCode = (resp && resp.country) ? resp.country : "";
-    //     callback(countryCode);
-    //   });
-    // },
-    // hiddenInput: "full_number",
-    // initialCountry: "auto",
-    // localizedCountries: { 'de': 'Deutschland' },
     nationalMode: true,
     // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
     placeholderNumberType: "MOBILE",
@@ -216,6 +218,145 @@ $(function () {
     // console.log(utmParams);
   }
 
+  //referral params
+  let referredBy = null;
+  let referralMode = null;
+  let url_string = window.location.href;
+  let referral_url = new URL(url_string);
+
+  if (referral_url.searchParams.has("referred_by")) {
+    referredBy = referral_url.searchParams.get("referred_by");
+    referralMode = referral_url.searchParams.get("referral_mode");
+    
+    otp_button.classList.remove("d-none");
+  } else {
+    referredBy = null;
+    referralMode = null;
+  }
+
+  //otp
+  const loadingAndUnloadingButton = (id, isLoading, text) => {
+    if (id == "otp-button") {
+      return $(`#${id}`).html(
+        isLoading ? `<i class="fa fa-spinner fa-spin"></i>` : text
+      );
+    }
+    $(`#${id}`).prop("disabled", isLoading);
+  $(`#${id}`).html(isLoading ? `<i class="fa fa-spinner fa-spin"></i>` : text);
+  };
+
+  $("#otp-button").click(function () {
+    myOtp();
+  });
+  
+  const myOtp = () => {
+    
+    var email = document.getElementById("email").value;
+    loadingAndUnloadingButton("otp-button", true, "");
+    //countdown timer for resend OTP
+    // console.log(email);
+    if (email === "" && !pattern.test(email)) {
+      $("#emailStatus").show();
+      showAndHideValueError("emailStatus", "Please enter valid Email id");
+      loadingAndUnloadingButton("otp-button", false, "Send OTP");
+      return null;
+    }
+    sendOtp(email);
+    
+  };
+
+  let disableFun = function () {
+    $("#otp-button").prop("disabled", false);
+  };
+
+  const sendOtp = (email) => {
+    $("#otp-button").attr("disabled", true);
+    var counter = 30;
+    var interval = setInterval(function () {
+      counter--;
+      // Display 'counter' wherever you want to display it.
+      if (counter <= 0) {
+        clearInterval(interval);
+        $("#otp-button").html(`Resend OTP`);
+        return;
+      } else {
+        $("#otp-button").html(`Resend OTP (${counter})`);
+      }
+    }, 1000);
+    setTimeout(disableFun, 30000);
+    $.ajax({
+      type: "GET",
+      url: `https://api.konfhub.com/event/${event_id}/referral/otp?event_name=${eventName}&email_id=${email}`,
+      success: (res) => {
+        otpsentFlag = true;
+        $("#otp_error").css("display", "block");
+        $("#email").prop("disabled", true);
+        otp_input.classList.remove("d-none");
+        $("#emailStatus").show();
+        showAndHideValueSuccess("emailStatus", "OTP sent");
+        otp_verify_button.classList.remove("d-none");
+        loadingAndUnloadingButton("otp-button", false, "Resend OTP");
+      },
+      error: (res) => {
+        // console.log(res);
+        loadingAndUnloadingButton("otp-button", false, "Send OTP");
+      },
+    });
+  };
+
+  //validate otp
+  $("#otp-verify-button").click(function () {
+    validateOtp();
+  });
+  const validateOtp = () => {
+    return new Promise((resolve, reject) => {
+    let otp = document.getElementById("form-reg-otp").value;
+      
+      // console.log(otp);
+      if (otp.length !== 4 && otp === "") {
+        showAndHideValueError("otp_error", "Please Enter valid OTP");
+        return null;
+      }
+  
+      var email = document.getElementById("email").value;
+      $.ajax({
+        type: "POST",
+        url: `https://api.konfhub.com/event/${event_id}/referral/otp`,
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify({
+          email_id: email,
+          otp: otp,
+        }),
+        success: (res) => {
+
+          if (res.message.otp_verified) {
+            otpVerifyFlag = true;
+            $("#otp_error").css("display", "none");
+            $("#otp-button").hide();
+            $("#form-reg-otp").css("display", "none");
+            $("#otp-verify-button").css("display", "none");
+            $("#otp_2_error").css("display","none");
+            $("#emailStatus").show();
+            showAndHideValueSuccess("emailStatus", "OTP verified");
+  
+            resolve(res);
+          } else {
+            
+            showAndHideValueError("otp_error", "Please Enter valid OTP");
+          }
+        },
+        error: (res) => {
+          loadingAndUnloadingButton("form-submit-btn", false, "Register");
+          $("#email").prop("disabled", false);
+          showAndHideValueError("otp_error", "Please Enter valid OTP");
+          reject(res);
+        },
+      });
+    });
+  };
+
+  //submit button
   const onFormSubmit = event => {
     event.preventDefault();
     if (!isEmailValid || !isPhoneNumberValid) {
@@ -233,24 +374,13 @@ $(function () {
     var otherConsent = document.getElementById("konf-aws").value;
     
     var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
-
-    //referral params
-    // let referredBy = null;
-    // let referralMode = null;
-
-    // let url_string = window.location.href;
-    // let referral_url = new URL(url_string);
-    // if (referral_url.searchParams.has("referred_by")) {
-    //   referredBy = referral_url.searchParams.get("referred_by");
-    //   referralMode = referral_url.searchParams.get("referral_mode");
-    // } else {
-    //   referredBy = null;
-    //   referralMode = null;
-    // }
+    
+    var otp = window.location.href.includes("referred_by")? document.getElementById("form-reg-otp").value: null;
 
     let dataBody = {
       event_id,
       "utm": utmParams,
+      "otp": otp,
       "consents": {
         is_subscriber: Boolean(trainingCloud),
         consent_to_organiser: Boolean(consent),
@@ -271,9 +401,9 @@ $(function () {
             "phone_number": $('#phone_number').val(),
             "whatsapp_number": phone,
             "country": "India",
-            // "referred_by": referredBy,
-            // "referral_mode": referralMode,
-            // "referral_campaign_id": 2132,
+            "referred_by": referredBy,
+            "referral_mode": referralMode,
+            "referral_campaign_id": window.location.href.includes("referred_by")?386: null,
             "custom_forms": {
               "16796": city
             },
@@ -298,7 +428,7 @@ $(function () {
       };
 
       document.getElementById("register-btn").disabled = true;
-
+      
       $.ajax(settings).done(function (response) {
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
@@ -334,7 +464,9 @@ $(function () {
     $.get(url, () => {
       $("#emailStatus").hide()
       isEmailValid = true;
+      $("#email-label").css("top","-20px");
     }).fail((err) => {
+      $("#email-label").css("top","-20px");
       $("#emailStatus").show();
       if(err.responseJSON.email_status == 8){
         message= "Another registration with the same email address exists. Please use another email address."
@@ -342,7 +474,7 @@ $(function () {
       else{
         message = "The email address provided doesn't seem to be valid. Please enter a valid one."
       }
-      $("#emailStatus").html(message);
+      showAndHideValueError("emailStatus",message)
     });
 
   });
@@ -363,7 +495,7 @@ $(function () {
       else{
         message = "The phone number provided doesn't seem to be valid. Please enter a valid one"
       }
-      $("#phoneError").html(message);
+      showAndHideValueError("phoneError", message);
     });
   });
 });
