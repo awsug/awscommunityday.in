@@ -3646,7 +3646,12 @@ transition:.2s all;
 .about-intro-1 ul li {
 	list-style-type: disc;
 	padding-bottom: 5px;
-	/* font-weight: normal; */
-	/* font-size: 18px; */
-	/* font-family: "amazon_emberlight"; */
+}
+
+.d-none{
+  display: none!important;
+}
+
+.otp-input{
+  margin: 5px 0px;
 }
