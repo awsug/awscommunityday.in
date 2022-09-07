@@ -6,6 +6,9 @@ $(function () {
   const eventName = 'AWS Community Day India - Virtual Edition 2022';
   let isEmailValid = false;
   let isPhoneNumberValid = false;
+  // if(window.location.href.includes("referred_by")){
+    
+  // }
   const otp_button = document.getElementById("otp-button");
   const otp_input = document.getElementById("form-reg-otp");
   const otp_verify_button = document.getElementById("otp-verify-button");
@@ -371,7 +374,8 @@ const showAndHideValueSuccess = (key, msg) => {
     var otherConsent = document.getElementById("konf-aws").value;
     
     var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
-    var otp = document.getElementById("form-reg-otp").value;
+    
+    var otp = window.location.href.includes("referred_by")? document.getElementById("form-reg-otp").value: null;
 
     let dataBody = {
       event_id,
@@ -399,7 +403,7 @@ const showAndHideValueSuccess = (key, msg) => {
             "country": "India",
             "referred_by": referredBy,
             "referral_mode": referralMode,
-            "referral_campaign_id": 386,
+            "referral_campaign_id": window.location.href.includes("referred_by")?386: null,
             "custom_forms": {
               "16796": city
             },
@@ -424,7 +428,7 @@ const showAndHideValueSuccess = (key, msg) => {
       };
 
       document.getElementById("register-btn").disabled = true;
-
+      console.log("hello");
       $.ajax(settings).done(function (response) {
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
