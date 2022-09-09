@@ -3618,12 +3618,11 @@ transition:.2s all;
   color: #111;
 }
 
-#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).git{
-  background-image: url(../images/spons/git.jpg)
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).re-skill{
+  background-image: url(https://awsreskill.com/logos/logo-black.svg?v=1);
 }
-
-#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).sbt{
-  background-image: url(../images/spons/sbt.png)
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).docker-bglore{
+  background-image: url(../images/spons/dockerBglore.jpeg);
 }
 
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).collabnix{
