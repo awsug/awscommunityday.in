@@ -304,6 +304,9 @@ const showAndHideValueSuccess = (key, msg) => {
     });
   };
 
+  let otpVerifyFlag;
+  const isReferral = window.location.href.includes("referred_by");
+  
   //validate otp
   $("#otp-verify-button").click(function () {
     validateOtp();
@@ -376,7 +379,11 @@ const showAndHideValueSuccess = (key, msg) => {
     var phone = iti.getNumber(intlTelInputUtils.numberFormat.E164);
     
     var otp = window.location.href.includes("referred_by")? document.getElementById("form-reg-otp").value: null;
-
+    if (!otpVerifyFlag && isReferral) {
+      showAndHideValueError("otp_2_error", "Please verify OTP");
+      loadingAndUnloadingButton("form-submit-btn", false, "Register");
+      error = true;
+    }
     let dataBody = {
       event_id,
       "utm": utmParams,
