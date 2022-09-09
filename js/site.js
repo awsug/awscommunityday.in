@@ -362,7 +362,7 @@ const showAndHideValueSuccess = (key, msg) => {
     if (!isEmailValid || !isPhoneNumberValid) {
       return;
     }
-
+    loadingAndUnloadingButton("form-submit-btn", true, "Register");
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var designation = document.getElementById("designation").value;
@@ -411,10 +411,6 @@ const showAndHideValueSuccess = (key, msg) => {
         ]
       }
     };
-
-    // if (location.search) {
-    //   dataBody['utm'] = utm
-    // }
 
     if (phone.length <= 13) {
       const settings = {
