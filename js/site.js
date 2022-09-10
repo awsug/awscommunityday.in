@@ -420,45 +420,84 @@ const showAndHideValueSuccess = (key, msg) => {
     };
 
     if (phone.length <= 13) {
-      const settings = {
-        "url": konfHubFormSubmitUrl,
-        "method": "POST",
-        "timeout": 0,
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "data": JSON.stringify(dataBody),
-      };
-
-      document.getElementById("register-btn").disabled = true;
+      if(referral_url.searchParams.has("referred_by")){
+        if(otpVerifyFlag){
+          const settings = {
+            "url": konfHubFormSubmitUrl,
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "data": JSON.stringify(dataBody),
+          };
+          document.getElementById("register-btn").disabled = true;
+        
+          $.ajax(settings).done(function (response) {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("designation").value = "";
+            document.getElementById("organisation").value = "";
+            document.getElementById("phone_number").value = "";
+            document.getElementById("city").value = "";
+            document.getElementById("idChk-normal").checked = false;
+            document.getElementById("konf-aws").checked = false
+            document.getElementById("register-btn").disabled = false;
+            $('#register').modal('hide');
+            // snackbar alert open 
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
+            $("#workshop_modal").modal();
+            var aTag = document.getElementById("referral_link");
+            var bookingId = (response && response.booking_id) ? response.booking_id : null;
+            aTag.href = "https://communityday.awsug.in/?utm_source=" + bookingId + "&utm_medium=email&utm_campaign=referral";
+          });
+        }
+      }
+      else{
+        const settings = {
+          "url": konfHubFormSubmitUrl,
+          "method": "POST",
+          "timeout": 0,
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "data": JSON.stringify(dataBody),
+        };
+        document.getElementById("register-btn").disabled = true;
       
-      $.ajax(settings).done(function (response) {
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("designation").value = "";
-        document.getElementById("organisation").value = "";
-        document.getElementById("phone_number").value = "";
-        document.getElementById("city").value = "";
-        document.getElementById("idChk-normal").checked = false;
-        document.getElementById("konf-aws").checked = false
-        document.getElementById("register-btn").disabled = false;
-        $('#register').modal('hide');
-        // snackbar alert open 
-        var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
-        $("#workshop_modal").modal();
-        var aTag = document.getElementById("referral_link");
-        var bookingId = (response && response.booking_id) ? response.booking_id : null;
-        aTag.href = "https://communityday.awsug.in/?utm_source=" + bookingId + "&utm_medium=email&utm_campaign=referral";
-      });
+        $.ajax(settings).done(function (response) {
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("designation").value = "";
+          document.getElementById("organisation").value = "";
+          document.getElementById("phone_number").value = "";
+          document.getElementById("city").value = "";
+          document.getElementById("idChk-normal").checked = false;
+          document.getElementById("konf-aws").checked = false
+          document.getElementById("register-btn").disabled = false;
+          $('#register').modal('hide');
+          // snackbar alert open 
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
+          $("#workshop_modal").modal();
+          var aTag = document.getElementById("referral_link");
+          var bookingId = (response && response.booking_id) ? response.booking_id : null;
+          aTag.href = "https://communityday.awsug.in/?utm_source=" + bookingId + "&utm_medium=email&utm_campaign=referral";
+        });
+      }
+
+      
     } else {
       $('.error').show();
       return false
     }
   }
 
-  $('form').submit(onFormSubmit);
+    $('form').submit(onFormSubmit);
+  
 
   $('#email').change((ev) => {
     const url = `${konfHubValidateUrl}?event_id=${event_id}&ticket_id=${ticket_id}&email_id=${ev.currentTarget.value}`;
