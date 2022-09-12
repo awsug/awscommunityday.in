@@ -1804,7 +1804,7 @@ ul.circle li {
   #page .section-5 .sponsors .cats .flex-it {
     flex-wrap: wrap;
     position: relative;
-    padding-left: 7%;
+    /* padding-left: 7%; */
   }
 }
 @media only screen and (max-width: 991px) {
@@ -1908,12 +1908,13 @@ ul.circle li {
   #page .section-5 .sponsors .cats .flex-it .f1 {
     min-width: 50%;
     padding: 0;
+    margin:10px 10px;
   }
   /* line 680, ../sass/shared/_home.scss */
-  #page .section-5 .sponsors .cats .flex-it .f1:last-child {
+  /* #page .section-5 .sponsors .cats .flex-it .f1:last-child {
     min-width: calc(50% + 50px);
     padding-right: 50px;
-  }
+  } */
 }
 /* line 685, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div {
@@ -1944,6 +1945,10 @@ ul.circle li {
   #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head) {
     background-size: 80%;
   }
+}
+.sponser-list{
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /* line 706, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).jfrog {
