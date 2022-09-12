@@ -3624,9 +3624,12 @@ transition:.2s all;
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).docker-bglore{
   background-image: url(../images/spons/dockerBglore.jpeg);
 }
-
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).PyLadies{
+  background-image: url(../images/spons/pyladies.jpeg);
+}
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).collabnix{
-  background-image: url(../images/spons/collabnix.jpeg)
+  background-image: url(../images/spons/collabnix.jpeg);
+  background-size: 100px;
 }
 
 .about-intro-1 p {
