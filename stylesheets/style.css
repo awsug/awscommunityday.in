@@ -3629,7 +3629,7 @@ transition:.2s all;
 }
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).collabnix{
   background-image: url(../images/spons/collabnix.jpeg);
-  background-size: 100px;
+  background-size: 100px!important;
 }
 
 .about-intro-1 p {
