@@ -2964,6 +2964,11 @@ ul.circle li {
   background-image: url(../images/vols/subhradip.jpeg);
 }
 
+
+#page .section-6 .volunteers .vl-i .person[data-fname="Avinash"] .img {
+  background-image: url(../images/vols/avinash.jpeg);
+}
+
 #page .section-9 .ambassadors .vl-i .person[data-fname="Kumar"] .img {
   background-image: url(../images/ambs/kumar_harsh.jpg);
   background-size: cover;
