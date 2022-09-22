@@ -2857,6 +2857,10 @@ ul.circle li {
   background-image: url(../images/vols/Dipali.png);
 }
 
+#page .section-6 .volunteers .vl-i .person[data-fname="Dhruv"] .img {
+  background-image: url(../images/vols/Dhruv_Aggarwal.png);
+}
+
 /* line 1012, ../sass/shared/_home.scss */
 #page .section-6 .volunteers .vl-i .person[data-fname="Gaurav"] .img {
   background-image: url(../images/vols/Gaurav.png);
