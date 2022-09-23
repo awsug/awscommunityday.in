@@ -261,7 +261,10 @@ const showAndHideValueSuccess = (key, msg) => {
       loadingAndUnloadingButton("otp-button", false, "Send OTP");
       return null;
     }
-    sendOtp(email);
+    else{
+      sendOtp(email);
+
+    }
     
   };
 
@@ -305,6 +308,7 @@ const showAndHideValueSuccess = (key, msg) => {
   };
 
   let otpVerifyFlag;
+  let emailValidateFlag;
   const isReferral = window.location.href.includes("referred_by");
   
   //validate otp
@@ -497,29 +501,33 @@ const showAndHideValueSuccess = (key, msg) => {
   }
 
     $('form').submit(onFormSubmit);
-  
-
-  $('#email').change((ev) => {
-    const url = `${konfHubValidateUrl}?event_id=${event_id}&ticket_id=${ticket_id}&email_id=${ev.currentTarget.value}`;
-    let message = '';
-    isEmailValid = false;
-    $.get(url, () => {
-      $("#emailStatus").hide()
-      isEmailValid = true;
-      $("#email-label").css("top","-20px");
-    }).fail((err) => {
-      $("#email-label").css("top","-20px");
-      $("#emailStatus").show();
-      if(err.responseJSON.email_status == 8){
-        message= "Another registration with the same email address exists. Please use another email address."
-      }
-      else{
-        message = "The email address provided doesn't seem to be valid. Please enter a valid one."
-      }
-      showAndHideValueError("emailStatus",message)
-    });
-
-  });
+    
+      $('#email').change('input', (ev) => {
+        let message = '';
+        isEmailValid = false;
+          const url = `${konfHubValidateUrl}?event_id=${event_id}&ticket_id=${ticket_id}&email_id=${ev.currentTarget.value}`;
+          $.get(url, () => {
+            $("#emailStatus").hide()
+            isEmailValid = true;
+            $("#email-label").css("top","-20px");
+            $("#otp-button").prop("disabled", false);
+          }).fail((err) => {
+            $("#otp-button").prop("disabled", true);
+            $("#email-label").css("top","-20px");
+            $("#emailStatus").show();
+            if(err.responseJSON.email_status == 8){
+              message= "Another registration with the same email address exists. Please use another email address."
+            }
+            else{
+              message = "The email address provided doesn't seem to be valid. Please enter a valid one."
+            }
+            showAndHideValueError("emailStatus",message)
+          });
+    
+        }
+      );
+    
+    
 
   $('#phone_number').change((ev) => {
     const url = `${konfHubValidateUrl}?event_id=${event_id}&ticket_id=${ticket_id}&dial_code=${$('.iti__selected-dial-code').html().split('+')[1]}&phone_number=${ev.currentTarget.value}`;

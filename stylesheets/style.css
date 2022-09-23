@@ -2950,7 +2950,9 @@ ul.circle li {
 #page .section-6 .volunteers .vl-i .person[data-fname="Sabarinath"] .img {
   background-image: url(../images/vols/sabarinath.jpeg);
 }
-
+#page .section-6 .volunteers .vl-i .person[data-fname="Tajinder"] .img {
+  background-image: url(../images/vols/tajinder.jpeg);
+}
 #page .section-6 .volunteers .vl-i .person[data-fname="Parth Purvesh"] .img {
   background-image: url(../images/vols/parth-purvesh.jpeg);
 }
