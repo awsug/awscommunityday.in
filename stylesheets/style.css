@@ -457,6 +457,7 @@ input[type="reset"].button-sm {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  margin-bottom: 23px;
 }
 
 /* line 158, ../sass/shared/_site.scss */
@@ -4330,7 +4331,9 @@ input:valid~label {
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).PyLadies {
   background-image: url(../images/community-partners/pyladies.jpeg);
 }
-
+#page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).cloud-tech {
+  background-image: url(../images/community-partners/cloudTech.jpeg);
+}
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).DevOps-Community {
   background-image: url(../images/community-partners/devops.svg);
 }
