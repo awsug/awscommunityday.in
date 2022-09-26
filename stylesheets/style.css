@@ -4324,13 +4324,19 @@ input:valid~label {
 }
 
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).docker-bglore {
-  background-image: url(../images/spons/dockerBglore.jpeg);
+  background-image: url(../images/community-partners/dockerBglore.jpeg);
 }
 
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).PyLadies {
-  background-image: url(../images/spons/pyladies.jpeg);
+  background-image: url(../images/community-partners/pyladies.jpeg);
 }
 
+#page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).DevOps-Community {
+  background-image: url(../images/community-partners/devops.svg);
+}
+#page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).Keep-Up {
+  background-image: url(../images/community-partners/keep-up.png);
+}
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).collabnix {
   background-image: url(../images/spons/collabnix.jpeg);
   background-size: cover;
