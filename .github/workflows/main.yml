@@ -22,6 +22,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           pip install awscli
-          aws s3 cp ./ s3://$BUCKET_NAME/ --recursive --include "*"
+          aws s3 cp ./ s3://$BUCKET_NAME/ --recursive --include "*" --exclude ".git/*"
           aws cloudfront create-invalidation --distribution-id $CDN_ID --paths "/*"
 
