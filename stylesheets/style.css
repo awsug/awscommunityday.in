@@ -4327,6 +4327,9 @@ input:valid~label {
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).docker-bglore {
   background-image: url(../images/community-partners/dockerBglore.jpeg);
 }
+#page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).js-lovers {
+  background-image: url(../images/community-partners/jslovers.jpg);
+}
 
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).PyLadies {
   background-image: url(../images/community-partners/pyladies.jpeg);
