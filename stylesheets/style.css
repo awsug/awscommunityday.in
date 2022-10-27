@@ -2105,6 +2105,11 @@ ul.circle li {
   margin-top: 50px;
 }
 
+#page .section-5 .sponsors .cats .sponsor-addition {
+  align-items: center;
+  margin-top: 40px;
+}
+
 @media only screen and (min-width: 992px) {
 
   /* line 590, ../sass/shared/_home.scss */
@@ -4334,6 +4339,12 @@ input:valid~label {
   line-height: 1.5;
   color: #111;
 }
+
+#page .section-5 .sponsors .cats .flex-it .f1 .sponsor {
+  border: none;
+  height: 50px !important;
+}
+
 
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).re-skill {
   background-image: url(https://awsreskill.com/logos/logo-black.svg?v=1);
