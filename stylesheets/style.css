@@ -3516,12 +3516,12 @@ th, td {
 
 /* line 1263, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_1 .bg_img {
-  background-image: url(../images/Amazon-Elastic-Container.png);
+  background-image: url(../images/workshop/serverless.svg);
 }
 
 /* line 1268, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_2 .bg_img {
-  background-image: url(../images/Machine-Learning.svg);
+  background-image: url(../images/workshop/data-analytics.png);
 }
 
 #page .section-tickets .card.with_icon.tick_work_3 .bg_img {
