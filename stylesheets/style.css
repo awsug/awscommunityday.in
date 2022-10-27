@@ -3453,7 +3453,7 @@ th, td {
 
   /* line 1216, ../sass/shared/_home.scss */
   #page .section-tickets .row>div {
-    width: calc(50% - 15px / 2);
+    /* width: calc(50% - 15px / 2); */
     margin-bottom: 15px;
     padding: 0;
   }
@@ -3461,13 +3461,13 @@ th, td {
   /* line 1220, ../sass/shared/_home.scss */
   #page .section-tickets .row>div:nth-child(1) {
     order: 1;
-    margin-right: 13px;
+    /* margin-right: 13px; */
   }
 
   /* line 1224, ../sass/shared/_home.scss */
   #page .section-tickets .row>div:nth-child(2) {
     order: 3;
-    margin-right: 15px;
+    /* margin-right: 15px; */
   }
 
   /* line 1228, ../sass/shared/_home.scss */
