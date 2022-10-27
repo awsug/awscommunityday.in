@@ -725,6 +725,7 @@ ul.circle li {
 .modal.fillo .modal-header {
   background: #ff9900;
   color: #fff;
+  border-radius: 6px;
 }
 
 /* line 324, ../sass/shared/_site.scss */
@@ -739,6 +740,26 @@ ul.circle li {
   color: #ff9900;
 }
 
+.ml-2 {
+  margin-left: 20px;
+}
+
+.pl-2 {
+  margin-left: 40px;
+}
+
+table, table:hover {
+  border: 1.5px solid black;
+}
+
+th, td, th:hover, td:hover {
+  outline: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
 @media only screen and (min-width: 992px) {
 
   /* line 334, ../sass/shared/_site.scss */
@@ -751,7 +772,7 @@ ul.circle li {
 
   /* line 339, ../sass/shared/_site.scss */
   .modal.fillo .modal-body {
-    padding: 50px;
+    padding: 30px 50px;
   }
 }
 
@@ -3794,6 +3815,18 @@ i.icon.large {
   margin-left: 5px;
 }
 
+
+.register-form-submit-btn {
+  background: #ff9900;
+  color: #fff;
+}
+
+.register-form-submit-btn:hover,
+.register-form-submit-btn:focus {
+color: #fff;
+border: none;
+}
+
 .btn-outline:hover {
   border: 1px solid #eea236;
   background: #eea236;
@@ -3816,6 +3849,7 @@ i.icon.large {
 
 
 /* register form css */
+
 .register-form-close-btn {
   display: flex;
   position: fixed;
