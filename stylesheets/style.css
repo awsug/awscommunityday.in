@@ -2448,6 +2448,15 @@ th, td {
   color: #fff;
 }
 
+.workhsop-speaker {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.align-vertical {
+  margin-top: 20px;
+}
+
 @media only screen and (min-width: 992px) {
 
   /* line 798, ../sass/shared/_home.scss */
@@ -3525,7 +3534,7 @@ th, td {
 }
 
 #page .section-tickets .card.with_icon.tick_work_3 .bg_img {
-  background-image: url(../images/workshop//aiml.svg);
+  background-image: url(../images/workshop/aiml.svg);
 }
 
 #page .section-tickets .card.with_icon.tick_work_4 .bg_img {
