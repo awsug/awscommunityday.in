@@ -116,6 +116,19 @@ const showAndHideValueSuccess = (key, msg) => {
     }
   }
 
+  document.getElementById("serverless-workshop").onclick = function () {
+    location.href = "https://konfhub.com/checkout/acd2022-serverless?ticketId=6451";
+};
+
+  document.getElementById("data-analytics-workshop").onclick = function () {
+    location.href = "https://konfhub.com/checkout/acd2022-data?ticketId=6453";
+};
+
+  document.getElementById("aiml-workshop").onclick = function () {
+    location.href = "https://konfhub.com/checkout/acd2022-al-ml?ticketId=6452";
+};
+
+
   function tableScroll() {
     if (
       $(this).scrollTop() > $(".table").offset().top - $("#nav-bar").height() &&

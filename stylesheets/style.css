@@ -725,6 +725,7 @@ ul.circle li {
 .modal.fillo .modal-header {
   background: #ff9900;
   color: #fff;
+  border-radius: 6px;
 }
 
 /* line 324, ../sass/shared/_site.scss */
@@ -739,6 +740,26 @@ ul.circle li {
   color: #ff9900;
 }
 
+.ml-2 {
+  margin-left: 20px;
+}
+
+.pl-2 {
+  margin-left: 40px;
+}
+
+table, table:hover {
+  border: 1.5px solid black;
+}
+
+th, td, th:hover, td:hover {
+  outline: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
 @media only screen and (min-width: 992px) {
 
   /* line 334, ../sass/shared/_site.scss */
@@ -751,7 +772,7 @@ ul.circle li {
 
   /* line 339, ../sass/shared/_site.scss */
   .modal.fillo .modal-body {
-    padding: 50px;
+    padding: 30px 50px;
   }
 }
 
@@ -3432,7 +3453,7 @@ ul.circle li {
 
   /* line 1216, ../sass/shared/_home.scss */
   #page .section-tickets .row>div {
-    width: calc(50% - 15px / 2);
+    /* width: calc(50% - 15px / 2); */
     margin-bottom: 15px;
     padding: 0;
   }
@@ -3440,13 +3461,13 @@ ul.circle li {
   /* line 1220, ../sass/shared/_home.scss */
   #page .section-tickets .row>div:nth-child(1) {
     order: 1;
-    margin-right: 13px;
+    /* margin-right: 13px; */
   }
 
   /* line 1224, ../sass/shared/_home.scss */
   #page .section-tickets .row>div:nth-child(2) {
     order: 3;
-    margin-right: 15px;
+    /* margin-right: 15px; */
   }
 
   /* line 1228, ../sass/shared/_home.scss */
@@ -3495,16 +3516,16 @@ ul.circle li {
 
 /* line 1263, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_1 .bg_img {
-  background-image: url(../images/Amazon-Elastic-Container.png);
+  background-image: url(../images/workshop/serverless.svg);
 }
 
 /* line 1268, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_2 .bg_img {
-  background-image: url(../images/Machine-Learning.svg);
+  background-image: url(../images/workshop/data-analytics.png);
 }
 
 #page .section-tickets .card.with_icon.tick_work_3 .bg_img {
-  background-image: url(../images/AWS-Lambda.svg);
+  background-image: url(../images/workshop//aiml.svg);
 }
 
 #page .section-tickets .card.with_icon.tick_work_4 .bg_img {
@@ -3794,6 +3815,18 @@ i.icon.large {
   margin-left: 5px;
 }
 
+
+.register-form-submit-btn {
+  background: #ff9900;
+  color: #fff;
+}
+
+.register-form-submit-btn:hover,
+.register-form-submit-btn:focus {
+color: #fff;
+border: none;
+}
+
 .btn-outline:hover {
   border: 1px solid #eea236;
   background: #eea236;
@@ -3816,6 +3849,7 @@ i.icon.large {
 
 
 /* register form css */
+
 .register-form-close-btn {
   display: flex;
   position: fixed;
