@@ -8,7 +8,13 @@ body {
   color: #555;
   font-size: 16px;
 }
-
+.modal-open{
+  position: fixed;
+  overflow: hidden;
+}
+.modal-body .section-tickets{
+  overflow-x: hidden;
+}
 /* line 6, ../sass/shared/_site.scss */
 body *:hover,
 body *:focus {
@@ -699,6 +705,7 @@ ul.circle li {
 /* line 299, ../sass/shared/_site.scss */
 .modal.in {
   pointer-events: all;
+  overflow-y:auto;
 }
 
 /* line 302, ../sass/shared/_site.scss */
@@ -773,6 +780,7 @@ th, td {
   /* line 339, ../sass/shared/_site.scss */
   .modal.fillo .modal-body {
     padding: 30px 50px;
+    overflow-x: hidden;
   }
 }
 
@@ -4370,6 +4378,7 @@ input:valid~label {
 .workshop_modal #page .section-tickets {
   background: rgb(255, 255, 255);
   padding: 10px 0px;
+  overflow-y: auto;
 }
 
 .check-cloud {

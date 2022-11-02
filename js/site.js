@@ -366,7 +366,7 @@ const showAndHideValueSuccess = (key, msg) => {
   
             resolve(res);
           } else {
-            
+            // console.log("wrong email")
             showAndHideValueError("otp_error", "Please Enter valid OTP");
           }
         },
@@ -379,7 +379,7 @@ const showAndHideValueSuccess = (key, msg) => {
       });
     });
   };
-
+  
   //submit button
   const onFormSubmit = event => {
     event.preventDefault();
@@ -470,6 +470,11 @@ const showAndHideValueSuccess = (key, msg) => {
             x.className = "show";
             setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
             $("#workshop_modal").modal();
+            $("#workshop_modal").on("show", function () {
+              $("body").addClass("modal-open");
+            }).on("hidden", function () {
+              $("body").removeClass("modal-open")
+            });
             var aTag = document.getElementById("referral_link");
             var bookingId = (response && response.booking_id) ? response.booking_id : null;
             aTag.href = "https://communityday.awsug.in/?utm_source=" + bookingId + "&utm_medium=email&utm_campaign=referral";
@@ -504,6 +509,11 @@ const showAndHideValueSuccess = (key, msg) => {
           x.className = "show";
           setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
           $("#workshop_modal").modal();
+          $("#workshop_modal").on("show", function () {
+            $("body").addClass("modal-open");
+          }).on("hidden", function () {
+            $("body").removeClass("modal-open")
+          });
           var aTag = document.getElementById("referral_link");
           var bookingId = (response && response.booking_id) ? response.booking_id : null;
           aTag.href = "https://communityday.awsug.in/?utm_source=" + bookingId + "&utm_medium=email&utm_campaign=referral";
