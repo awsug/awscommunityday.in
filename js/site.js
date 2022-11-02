@@ -13,7 +13,7 @@ $(function () {
   const otp_input = document.getElementById("form-reg-otp");
   const otp_verify_button = document.getElementById("otp-verify-button");
   tableScroll();
-
+  
   if ($(window).width() < 996) {
     toastScroll();
   }
@@ -117,15 +117,19 @@ const showAndHideValueSuccess = (key, msg) => {
   }
 
   document.getElementById("serverless-workshop").onclick = function () {
-    location.href = "https://konfhub.com/checkout/acd2022-serverless?ticketId=6451";
+    let serverless = "https://konfhub.com/checkout/acd2022-serverless?ticketId=6451";
+    window.open(serverless, '_blank');
 };
 
   document.getElementById("data-analytics-workshop").onclick = function () {
-    location.href = "https://konfhub.com/checkout/acd2022-data?ticketId=6453";
+    let data_analytics = "https://konfhub.com/checkout/acd2022-data?ticketId=6453";
+    window.open(data_analytics, '_blank');
+
 };
 
   document.getElementById("aiml-workshop").onclick = function () {
-    location.href = "https://konfhub.com/checkout/acd2022-al-ml?ticketId=6452";
+    let aiml = "https://konfhub.com/checkout/acd2022-al-ml?ticketId=6452";
+    window.open(aiml, '_blank');
 };
 
 
