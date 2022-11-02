@@ -13,7 +13,7 @@ $(function () {
   const otp_input = document.getElementById("form-reg-otp");
   const otp_verify_button = document.getElementById("otp-verify-button");
   tableScroll();
-
+  
   if ($(window).width() < 996) {
     toastScroll();
   }
@@ -117,15 +117,19 @@ const showAndHideValueSuccess = (key, msg) => {
   }
 
   document.getElementById("serverless-workshop").onclick = function () {
-    location.href = "https://konfhub.com/checkout/acd2022-serverless?ticketId=6451";
+    let serverless = "https://konfhub.com/checkout/acd2022-serverless?ticketId=6451";
+    window.open(serverless, '_blank');
 };
 
   document.getElementById("data-analytics-workshop").onclick = function () {
-    location.href = "https://konfhub.com/checkout/acd2022-data?ticketId=6453";
+    let data_analytics = "https://konfhub.com/checkout/acd2022-data?ticketId=6453";
+    window.open(data_analytics, '_blank');
+
 };
 
   document.getElementById("aiml-workshop").onclick = function () {
-    location.href = "https://konfhub.com/checkout/acd2022-al-ml?ticketId=6452";
+    let aiml = "https://konfhub.com/checkout/acd2022-al-ml?ticketId=6452";
+    window.open(aiml, '_blank');
 };
 
 
@@ -321,19 +325,19 @@ const showAndHideValueSuccess = (key, msg) => {
   };
 
   let otpVerifyFlag;
-  let emailValidateFlag;
   const isReferral = window.location.href.includes("referred_by");
   
   //validate otp
-  $("#otp-verify-button").click(function () {
-    validateOtp();
+  $("#otp-verify-button").on('click',function () {
+    if(otp_input.value){
+      validateOtp();
+    }
   });
   const validateOtp = () => {
     return new Promise((resolve, reject) => {
-    let otp = document.getElementById("form-reg-otp").value;
       
-      // console.log(otp);
-      if (otp.length !== 4 && otp === "") {
+      if (otp_input.value.length !== 4 && otp_input.value === "") {
+        
         showAndHideValueError("otp_error", "Please Enter valid OTP");
         return null;
       }
@@ -346,7 +350,7 @@ const showAndHideValueSuccess = (key, msg) => {
         dataType: "json",
         data: JSON.stringify({
           email_id: email,
-          otp: otp,
+          otp: otp_input.value,
         }),
         success: (res) => {
 
@@ -362,7 +366,6 @@ const showAndHideValueSuccess = (key, msg) => {
   
             resolve(res);
           } else {
-            
             showAndHideValueError("otp_error", "Please Enter valid OTP");
           }
         },
@@ -466,6 +469,11 @@ const showAndHideValueSuccess = (key, msg) => {
             x.className = "show";
             setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
             $("#workshop_modal").modal();
+            $("#workshop_modal").on("show", function () {
+              $("body").addClass("modal-open");
+            }).on("hidden", function () {
+              $("body").removeClass("modal-open")
+            });
             var aTag = document.getElementById("referral_link");
             var bookingId = (response && response.booking_id) ? response.booking_id : null;
             aTag.href = "https://communityday.awsug.in/?utm_source=" + bookingId + "&utm_medium=email&utm_campaign=referral";
@@ -500,6 +508,11 @@ const showAndHideValueSuccess = (key, msg) => {
           x.className = "show";
           setTimeout(function () { x.className = x.className.replace("show", ""); }, 4000);
           $("#workshop_modal").modal();
+          $("#workshop_modal").on("show", function () {
+            $("body").addClass("modal-open");
+          }).on("hidden", function () {
+            $("body").removeClass("modal-open")
+          });
           var aTag = document.getElementById("referral_link");
           var bookingId = (response && response.booking_id) ? response.booking_id : null;
           aTag.href = "https://communityday.awsug.in/?utm_source=" + bookingId + "&utm_medium=email&utm_campaign=referral";
