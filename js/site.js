@@ -325,19 +325,19 @@ const showAndHideValueSuccess = (key, msg) => {
   };
 
   let otpVerifyFlag;
-  let emailValidateFlag;
   const isReferral = window.location.href.includes("referred_by");
   
   //validate otp
-  $("#otp-verify-button").click(function () {
-    validateOtp();
+  $("#otp-verify-button").on('click',function () {
+    if(otp_input.value){
+      validateOtp();
+    }
   });
   const validateOtp = () => {
     return new Promise((resolve, reject) => {
-    let otp = document.getElementById("form-reg-otp").value;
       
-      // console.log(otp);
-      if (otp.length !== 4 && otp === "") {
+      if (otp_input.value.length !== 4 && otp_input.value === "") {
+        
         showAndHideValueError("otp_error", "Please Enter valid OTP");
         return null;
       }
@@ -350,7 +350,7 @@ const showAndHideValueSuccess = (key, msg) => {
         dataType: "json",
         data: JSON.stringify({
           email_id: email,
-          otp: otp,
+          otp: otp_input.value,
         }),
         success: (res) => {
 
@@ -366,7 +366,6 @@ const showAndHideValueSuccess = (key, msg) => {
   
             resolve(res);
           } else {
-            // console.log("wrong email")
             showAndHideValueError("otp_error", "Please Enter valid OTP");
           }
         },
@@ -379,7 +378,7 @@ const showAndHideValueSuccess = (key, msg) => {
       });
     });
   };
-  
+
   //submit button
   const onFormSubmit = event => {
     event.preventDefault();
