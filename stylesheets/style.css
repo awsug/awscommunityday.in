@@ -2982,6 +2982,12 @@ th, td {
 #page .section-6 .volunteers .vl-i .person[data-fname="Vivek Raja"] .img {
   background-image: url(../images/vols/vivek-raja.jpeg);
 }
+#page .section-6 .volunteers .vl-i .person[data-fname="VijayaNirmala"] .img {
+  background-image: url(../images/speakers/sessions/vijayanirmalakumar.png);
+}
+#page .section-6 .volunteers .vl-i .person[data-fname="Ramya"] .img {
+  background-image: url(../images/vols/ramya.jpeg);
+}
 
 #page .section-6 .volunteers .vl-i .person[data-fname="Sanchit"] .img {
   background-image: url(../images/vols/sanchit-jain.jpeg);
