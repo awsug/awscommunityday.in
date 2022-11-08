@@ -1,10 +1,16 @@
 let camera_button = document.querySelector("#start-camera");
 let video = document.querySelector("#video");
+video.setAttribute("playsinline", true);
 let click_button = document.querySelector("#click-photo");
 let canvas = document.querySelector("#canvas");
-
+var constraints = {
+    audio: false,
+    video: {
+        facingMode: 'user'
+    }
+}
 camera_button.addEventListener('click', async function() {
-   	let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+   	let stream = await navigator.mediaDevices.getUserMedia(constraints);
 	video.srcObject = stream;
 });
 camera_button.click();
