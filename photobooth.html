@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AWS Community Day India 2022</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="msapplication-config" content="images/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta property="og:url" content="https://communityday.awsug.in" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AWS Community Day India 2022" />
+  <meta property="og:description"
+    content="AWS Community Day India 2022 is being organized by AWS User Group India. We're united by community-led learnings and diversified by the wide variety of tools and technologies closely knit with Amazon Web Services." />
+
+  <meta property="og:image" content="/images/awscommunityday-blacknwhite.png" />
+  <meta property="og:image:secure_url" content="https://communityday.awsug.in/images/aws-india-group.png" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@awsug">
+  <meta name="twitter:creator" content="@awsugindia">
+  <meta name="twitter:title" content="AWS Users Group India">
+  <meta name="twitter:description"
+    content="AWS User Group India is volunteer driven, group of passionate Amazon Web Services (aka AWS) {Developers, Architects, Users, Evangelists} who meet to {share best practices, discuss up coming features, pit falls, etc} in India.">
+  <meta name="twitter:image" content="https://communityday.awsug.in/images/aws-india-group.png">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheets/intlTelInput.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="2018/assets/css/style1.css"> -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/photobooth.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  <script type="text/javascript" src="js/canvas2image.js" ></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171268306-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-171268306-1');
+  </script>
+  <!-- This line is required for side sharethis-inline-share-buttons -->
+  <script type="text/javascript"
+    src="https://platform-api.sharethis.com/js/sharethis.js#property=630e27bafd193a0013760206&product=sticky-share-buttons"></script>
+  <link rel="manifest" href="/manifest.json" />
+  
+   
+</head>
+
+<body>
+  <div id="page">
+    <div class="section section-1 hdr" id="home">
+        <div class="photo_upload">
+            <div id="bphoto">
+               
+              <div class="card cardwp" id="card1">
+             
+                <div class="card-body">
+                    <video id="video" width="337" height="200" autoplay></video> 
+                </div>
+              </div>
+              <div> 
+                <button id="start-camera" style="visibility: hidden;">Start Camera</button>
+                <button  id="click-photo" "="">Click me</button>
+              </div>
+            </div>
+            <div id="bnophoto">
+              
+              <div class="card cardwop"  id="photoframe" crossorigin="anonymous">
+              
+                <div class="card-body"> 
+                    <canvas id="canvas" width="200" height="200" class="galleryImage"></canvas>
+                </div>
+              </div>
+              <div>
+                <button onclick="takeshot()">
+                    Download
+                </button>
+              </div>
+            </div>
+          </div>
+      <div id="nav-bar">
+        <p id="toggle"><span></span></p>
+        <!-- <li class="spec">
+          <a class="buy-ticket-link disabled button" >Sold Out</a>
+        </li> -->
+        <ul>
+          <!-- <li>
+            <a href="#home" style="background-color: red; font-size: 2em; font-weight: bold;">LIVE</a>
+          </li> -->
+          <li>
+            <a href="#com_info">About</a>
+          </li>
+          <!-- <li>
+            <a href="#cfp">CFP</a>
+          </li> -->
+          <!-- <li>
+            <a href="#venues">Venues</a>
+          </li> -->
+          <li>
+            <a href="#agenda">Agenda</a>
+          </li>
+          
+          <li>
+            <a href="#workshop">Workshops</a>
+          </li>
+          <li>
+            <a href="#hackathon">Hackathon</a>
+          </li>
+          <li>
+            <a href="#sponsors">Sponsors</a>
+          </li>
+          <li>
+            <a href="#communityPartners">Community Partners</a>
+          </li>
+          
+          <li>
+            <a href="#speakers">Speakers</a>
+          </li>
+          <!-- <li>
+            <a href="https://blog.awsug.in" target="_blank" rel="noopener noreferrer">Blog</a>
+          </li> -->
+
+          <li>
+            <a href="#volunteers">Volunteers</a>
+          </li>
+          <li>
+            <a href="code-of-conduct.html">Code Of Conduct</a>
+          </li>
+          <!-- <li>
+            <a href="https://communityday.awsug.in/2018" target="_blank">Community Day 2018</a>
+          </li> -->
+          <!-- <li>
+            <a href="#subscribe" id="sub-button" class="sub-button">
+              <i class="icon large ion-md-notifications-outline"></i>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </div> 
+  
+
+
+ 
+ 
+
+ 
+
+ 
+
+    <!-- <div class="bottom-footer text-center">
+      <div class="container">
+        <div class="col-lg-12">
+          <span>For any queries reach out to </span><a href="mailto:help@awsug.in">help@awsug.in </a>
+        </div>
+      </div>
+    </div>
+    <div class="section section-7" id="subscribe">
+      <div class="container">
+        <div class="sponsors">
+          <div class="foot-fk">
+            <h4 class="main-heading-ttl">SHOW YOUR INTEREST</h4>
+            <div class="row flex-it vcenter">
+              <div class="col-md-12">
+                <!-- sharing buttons -->
+                <!-- <div class="sharethis-inline-share-buttons"></div>
+              </div>
+            </div>
+            <p class="text-center hide">
+              <small>Please do read the Code of Conduct for this event.</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> --> 
+
+  </div>
+ 
+
+ 
+ 
+
+
+ 
+  
+  
+  <script type="text/javascript" src="js/photobooth.js"></script>
+</body>
+
+</html>
