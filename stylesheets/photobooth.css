@@ -1,3 +1,10 @@
+#logo {
+    width: 8em;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+} 
+ 
 .framebg{
     background: url(../images/acd_photobooth_frame.jpeg) no-repeat; 
     margin: auto;
@@ -16,8 +23,7 @@
     object-fit: cover;
     margin-top: 39px;
     margin-left: 5px;
-    padding: 10px;
-    z-index: 10;
+    padding: 10px; 
     cursor: move;
     width: 276px;
     height: 308px;
