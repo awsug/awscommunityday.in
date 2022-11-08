@@ -40,6 +40,7 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="stylesheets/intlTelInput.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="2018/assets/css/style1.css"> -->
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -167,7 +168,7 @@
             <a href="#home" style="background-color: red; font-size: 2em; font-weight: bold;">LIVE</a>
           </li> -->
           <li>
-            <a href="#com_info">About Community Day</a>
+            <a href="#com_info">About</a>
           </li>
           <!-- <li>
             <a href="#cfp">CFP</a>
@@ -175,15 +176,23 @@
           <!-- <li>
             <a href="#venues">Venues</a>
           </li> -->
-          <!-- <li>
-            <a href="#agenda">Agenda</a>
-          </li> -->
-          <!-- <li>
-            <a href="#workshop">Workshops</a>
-          </li> -->
           <li>
-            <a href="#sponsors">Community Partners</a>
+            <a href="#agenda">Agenda</a>
           </li>
+          
+          <li>
+            <a href="#workshop">Workshops</a>
+          </li>
+          <li>
+            <a href="#hackathon">Hackathon</a>
+          </li>
+          <li>
+            <a href="#sponsors">Sponsors</a>
+          </li>
+          <li>
+            <a href="#communityPartners">Community Partners</a>
+          </li>
+          
           <li>
             <a href="#speakers">Speakers</a>
           </li>
@@ -200,11 +209,11 @@
           <!-- <li>
             <a href="https://communityday.awsug.in/2018" target="_blank">Community Day 2018</a>
           </li> -->
-          <li>
+          <!-- <li>
             <a href="#subscribe" id="sub-button" class="sub-button">
               <i class="icon large ion-md-notifications-outline"></i>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -217,16 +226,16 @@
             </h4>
             <p>
               <b>AWS User Group India</b>
-              is united by community-led learnings and
+              is a volunteer based group that is united by community-led learnings and
               diversified by the wide variety of tools and technologies
               closely knit with Amazon Web Services, cloud computing
               technology, AWS design implementation and servicing, high
               scalability / performance computing, production use cases of
-              AWS, blockchain, Artificial Intelligence and much more.
+              AWS.
             </p>
             <p>
               AWS Community Days are community-organized cloud education events, featuring technical discussions
-              and demos led by expert AWS users and industry leaders from around the world
+              and demos led by expert AWS users and industry leaders from around the world.
             </p>
             <p>
               Community-based learning is the best way to enhance the concepts
@@ -360,52 +369,53 @@
           </div>
           <div class="modal-body">
             <div id="page">
-              <div class="section section-tickets text-center inv">
+              <div class="section section-tickets inv">
                 <div class="container">
-                  <h4 class="main-heading-ttl text-center workshop_title">Thank you for the registration.</h4>
-                  <!-- <h4 class="main-heading-ttl text-center workshop_title">WE ALSO HAVE THREE AWESOME WORKSHOPS ON 17th OCT</h4> -->
-                  <!-- <div class="row flex-it">
+                  <h4 class="main-heading-ttl text-center workshop_title">Thank you registering for the event!</h4>
+                  <h5 style="font-size: 18px;line-height:1.5em; padding-bottom:10px">You have successfully registered for the first day of the event (11th November 2022). A confirmation email has been sent to you, and the streaming details will be communicated closer to the event.</h5>
+                  
+                  <h5 style="font-size: 18px;line-height:1.5em">You can also be a part of this amazing event in the following ways:</h5>
+                  <ol>
+                    <li>
+                      <h5 style="font-size: 18px;line-height:1.5em">Spread the word about the event - participate in the <span><a href="https://referral.konfhub.com/acd-2022/referral" target="_blank" style="color:#ff9900">referral contest</a></span> and stand a chance to win Amazon vouchers! You can share the unique referral link sent to you in the confirmation email.</h5>
+                    </li>
+                    <li>
+                      <h5 style="font-size: 18px;line-height:1.5em">Help enhance the events & developer community's experience - particpate in the AWSomeify <span><a href="https://awsomeify.devpost.com/" target="_blank" style="color:#ff9900">Hackathon</a></span> and stand a chance to win a prize pool of 70,000 INR!
+                    </li>
+                    <li>
+                      <h5 style="font-size: 18px;line-height:1.5em">Get hands-on with AWS - want to get your hands dirty and learn how to build production world applications with all the best practices? Learn from the experts during the workshop on the second day (12th November):</h5>
+                    </li>
+                  </ol>
+                  <div class="row flex-it">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                      <div class="card tick_work_1 with_icon dark" style="padding:16px 15px 12px 15px">
+                        <h4 class="heading-ttl" style="font-size:14px">Build your own Serverless Food Delivery App in 3 hours!</h4>
+                        <div class="bg_img"></div>
+                        <!-- <p> Leverage AWS Serverless services to build a simple food delivery app in less than 3 hours! </p> -->
+                        <button type="button" data-toggle="modal" data-target="#serverless">Details</button>
+                      </div>
+                  </div>
 
-                <div class="col-md-4">
-                  <div class="card tick_work_1 with_icon dark">
-                    <h4 class="heading-ttl">Containers</h4>
-                    <div class="bg_img">
-                      <img src="images/Amazon-Elastic-Container.png" class="img-responsive">
-                    </div>
-                    <p>Gets you access to Containers Workshop </p>
-                    <button type="button" data-toggle="modal" data-target="">Sold Out</button>
-                    <button type="button">Announcing Soon</button>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <div class="card tick_work_2 with_icon dark" style="padding:16px 15px 12px 15px">
+                    <h4 class="heading-ttl" style="font-size:14px">Data and Analytics Engineering Workshop</h4>
+                    <div class="bg_img"></div>
+                    <!-- <p>Generate Insight by Breaking Data Silos on AWS </p> -->
+                    <button type="button" data-toggle="modal" data-target="#data-anlytics">Details</button>
                   </div>
                 </div>
 
-                <div class="col-md-4">
-                  <div class="card tick_work_2 with_icon dark">
-                    <h4 class="heading-ttl">Machine Learning</h4>
-                    <div class="bg_img"><img src="images/Machine-Learning.svg" class="img-responsive"></div>
-                    <p>Gets you access to Machine Learning </p>
-                    <button type="button" data-toggle="modal" data-target="">Sold Out</button>
-                    <button type="button">Announcing Soon</button>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                  <div class="card tick_work_3 with_icon dark" style="padding:16px 15px 12px 15px">
+                    <h4 class="heading-ttl" style="font-size:14px">AWS Workshop for AI/ML </h4>
+                    <div class="bg_img"></div>
+                    <!-- <p>Using Amazon SageMaker to Train & Deploy ScikitLearn ML Model and Integrate to API Gateway using AWS
+                      Lambda Function </p> -->
+                    <button type="button" data-toggle="modal" data-target="#aiml">Details</button>
                   </div>
                 </div>
-
-                <div class="col-md-4">
-                  <div class="card tick_work_3 with_icon">
-                    <h4 class="heading-ttl">Serverless</h4>
-                    <div class="bg_img"><img src="images/AWS-Lambda.svg" class="img-responsive"></div>
-                    <p>Gets you access to Serverless workshop </p>
-                    <button type="button" data-toggle="modal" data-target="">Sold Out</button>
-                    <button type="button">Announcing Soon</button>
-                  </div>
+                
                 </div>
-                <div class="col-md-3">
-                  <div class="card tick_work_4 with_icon dark">
-                    <h4 class="heading-ttl">Alexa</h4>
-                    <div class="bg_img"><img src="images/Amazon_Alexa.png" class="img-responsive"></div>
-                    <p>Gets you access to Alexa Workshop </p>
-                    <button type="button" data-toggle="modal" data-target="">Closed</button>                    
-                  </div>
-                </div>
-              </div> -->
                 </div>
               </div>
             </div>
@@ -964,13 +974,40 @@
       </div>
     </div> -->
 
+    <div class="section-6 inv" id="Speakers" style="background-color: #eeeeee; color: #000000">
+      <h4 id="Keynote_Speakers" class="main-heading-ttl text-center" style="color:#232f3e;"> Keynote Speaker</h4><hr>
+      <div class="container">
+        <div>
+					<div class="container" style="padding:10px">
+						<div class="col-md-4 col-sm-12" style="margin-right:20px">
+							<div class="lb-grid lb-row lb-row-max-large lb-snap lb-gutter-mid">
+								<div class="lb-tiny-24 lb-mid-6">
+									<figure class="lb-img">
+										<div>
+											<img class="speakers-img" alt="Jeff Barr" title="Jeff Barr" src="images/speakers/key_note_speaker.JPG" style="border-radius: 25px;">
+										</div>
+									</figure>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-sm-12">
+							<div class="my-5">
+                <h3 style="color: #555">A Cloud Odyssey by Rohini Gaonkar </h3>
+              </div>
+							<p class=" text-justify" style="color: #555; margin-top:25px">
+                In this session, we will have a look at the evolution of the technological landscape over the years and how cloud computing has helped in this evolution. We will look at some real world scenarios of how technology is changing the world we live in today. We will also explore how the new generation of builders can use technology to boost their careers and soar towards success.
+							</p>
+						</div>
+					</div>					
+				</div>
+      </div>
+    </div>
 
-
-    <!-- <div class="section section-4 inv" id="agenda">
+    <div class="section section-4 inv" id="agenda">
       <div class="container">
         <div class="sponsors">
-          <h4 class="main-heading-ttl text-center white-text">Agenda</h4>
-          
+          <h4 class="main-heading-ttl text-center white-text">Agenda (11th November)</h4>
+
           <div class="text-center agenda">
             <div class="table">
               <div class="thead">
@@ -996,9 +1033,9 @@
 
               <div class="tbody">
                 <div class="tr">
-                <div class="td idx">
-                    <div>
-                    </div>
+                  <!-- <div class="td idx">
+                      <div>
+                      </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
@@ -1010,12 +1047,12 @@
                     <div>
                       <p><a target="_blank" href="https://www.youtube.com/embed/N2I8a9jzixY">Watch on YouTube</a></p>
                     </div>
-                  </div>
-               </div>
+                  </div> -->
+                </div>
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>9:00 AM - 9:25 AM</p>
+                      <p>9:30 AM - 10:00 AM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
@@ -1028,12 +1065,49 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>9:25 AM - 9:30 AM</p>
+                      <p>10:00 AM - 10:30 AM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Welcome Note</p>
+                      <p>Keynote - "A Cloud Odyssey"</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/rohinigaonkar/">Rohini Gaonkar </a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>10:30 AM - 11:15 AM</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Enabling automated multi-region failover and failback using Route 53 - <a target="_blank" href="https://www.linkedin.com/in/jeffbarr/">Sathyajith Bhat</a></p>
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>10:30 AM - 11:15 AM</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Enabling automated multi-region failover and failback using Route 53</p>
+                      <p><a target="_blank" href="https://linkedin.com/in/sathyabhat">Sathyajith Bhat</a></p>
+                    </div>
+                  </div>
+
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Build AI/ML Apps without Data Science, Statistics, or ML Algorithm expertise using AWS AI
+                        Service</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/ilanchezhian/">Ilanchezhian
+                          Ganesamurthy</a></p>
                     </div>
                   </div>
                 </div>
@@ -1041,12 +1115,21 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>9:30 AM - 10:00 AM</p>
+                      <p>11:15 AM - 12:00 PM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Keynote Presentation - Rethink, Reinvent, Rebuild - <a target="_blank" href="https://www.linkedin.com/in/jeffbarr/">Jeff Barr</a></p>
+                      <p>The Past, Present, and Future of Serverless</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/jeremydaly/">Jeremy Daly</a></p>
+                    </div>
+                  </div>
+
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Readmission prediction for heart failure patients using Sagemaker & AWS Comprehend Medical</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/sarbani-maiti-35b89111/">Sarbani Maiti</a>
+                        & <a target="_blank" href="https://www.linkedin.com/in/tanmoy-roy-328b592b/">Tanmoy Roy</a></p>
                     </div>
                   </div>
                 </div>
@@ -1054,20 +1137,20 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>10:00 AM - 10:45 AM</p>
+                      <p>12:00 PM - 12:30 PM </p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Using Aurora Global Databases for [10x] faster API</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/swaroophegde">Swaroop Hegde</a></p>
+                      <p>Brilliant Traits of Leading by Example</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/bhuvanas/">Bhuvana</a></p>
                     </div>
                   </div>
-
                   <div class="td" colspan="4">
                     <div>
-                      <p>Intelligent Serverless and Scalable Real-Time Data Pipeline using Kinesis, Fargate and CFN</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/sharma-yogesh/">Yogesh Sharma</a></p>
+                      <p>Incredible success stories: unlocking the possible</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/shefali-arora-9a6a2a10">Shefali Arora</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1075,80 +1158,21 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>10:45 AM - 11:00 AM</p>
+                      <p>12:30 PM - 1:15 PM </p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Host Interaction</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tr">
-                  <div class="td idx">
-                    <div>
-                      <p>11:00 AM - 11:45 AM</p>
+                      <p>Modern Data Architecture for Vyaire Medical</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/praha24/">Prahalathan Muralidharan</a> &
+                        <a target="_blank" href="https://www.linkedin.com/in/gomathi-p-b703a94b/">Gomathi P</a>
+                      </p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Finding the right Needle in the Haystack - Mastering desired Observability for Serverless Applications</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/kapil-gambhir-337a0b4/">Kapil Gambhir</a></p>
-                    </div>
-                  </div>
-
-                  <div class="td" colspan="4">
-                    <div>
-                      <p>Secure Cloud Governance with AWS Landing Zone</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/tusharguptaa/">Tushar Gupta</a></p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tr">
-                  <div class="td idx">
-                    <div>
-                      <p>11:45 PM - 12:00 PM</p>
-                    </div>
-                  </div>
-                  <div class="td" colspan="4">
-                    <div>
-                      <p>Host Interaction</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tr">
-                  <div class="td idx">
-                    <div>
-                      <p>12:00 PM - 12:45 PM</p>
-                    </div>
-                  </div>
-                  <div class="td" colspan="4">
-                    <div>
-                      <p>Infrastructure is Code with AWS CDK</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/swapnil-jakhetia-2b91692a/">Swapnil Jakhetia</a></p>
-                    </div>
-                  </div>
-
-                  <div class="td" colspan="4">
-                    <div>
-                      <p>Going viral with AWS AI/ML services</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/mikegchambers/">Mike Chambers</a></p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tr">
-                  <div class="td idx">
-                    <div>
-                      <p>12:45 PM - 1:00 PM</p>
-                    </div>
-                  </div>
-                  <div class="td" colspan="4">
-                    <div>
-                      <p>Host Interaction</p>
+                      <p>How to choose the right messaging service for your workload</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/theburningmonk">Yan Cui</a></p>
                     </div>
                   </div>
                 </div>
@@ -1156,7 +1180,7 @@
                 <div class="tr gap">
                   <div class="td idx">
                     <div>
-                      <p>1:00 PM - 2:00 PM</p>
+                      <p>1:15 PM - 2:00 PM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
@@ -1169,12 +1193,12 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>1:30 PM - 2:00 PM</p>
+                      <p>2:00 PM - 2:15 PM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Quiz 2</p>
+                      <p>Quiz/Games</p>
                     </div>
                   </div>
                 </div>
@@ -1182,12 +1206,12 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>1:45 PM - 2:00 PM</p>
+                      <p>2:15 PM - 2:30 PM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Host Interaction</p>
+                      <p>Hackathon Winners Announcement</p>
                     </div>
                   </div>
                 </div>
@@ -1195,33 +1219,20 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>2:00 PM - 2:45 PM</p>
+                      <p>2:30 PM - 3:00 PM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Using Ansible to Manage Hybrid Architecture</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/abesh-rajasekharan-3313b525/">Abesh Rajasekharan</a></p>
-                    </div>
-                  </div>
-
-                  <div class="td" colspan="4">
-                    <div>
-                      <p>Serverless Cron with Second Level Schedule and Conditional Flow</p>
-                      <p><a target="_blank" href="https://linkedin.com/in/mayank9856">Mayank Raj</a></p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tr">
-                  <div class="td idx">
-                    <div>
-                      <p>2:45 PM - 3:00 PM</p>
+                      <p>Observability Masterclass</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/chris-cooney-06751870/">Chris Cooney</a></p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Host Interaction</p>
+                      <p>Data Lake Mesh</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/gaurav-kumar-a5298493/">Gaurav Kumar</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1234,15 +1245,16 @@
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Security Automation in AWS using Lambda</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/sapna-singh-cissp-ccsk-msclis-86479626/">Sapna Singh</a></p>
+                      <p>Building an ETL Data Pipeline in Python on AWS</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/suman-d/">Suman Debnath</a> & <a
+                          target="_blank" href="https://www.linkedin.com/in/moomindani/">Noritaka Sekiyama</a></p>
                     </div>
                   </div>
-
                   <div class="td" colspan="4">
                     <div>
-                      <p>Unicorn: Leverage & Accelerate CI/CD for Databases using AWS Native Tools</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/vijayanirmalagopal-5a54159a/">Vijaya Nirmala Gopal</a></p>
+                      <p>Migrating from Server to Serverless: The Whizlabs story!</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/pavan-gumaste-39556755/">Pavan Gumaste</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1250,12 +1262,20 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>3:45 PM - 4:00 PM</p>
+                      <p>3:45 PM - 4:05 PM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Host Interaction</p>
+                      <p>Solid Social Media presence without impacting work</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/sandip-das-developer/">Sandip Das</a></p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>A simple Text-to-Speech Serverless App using Amazon Polly and Amplify</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/kaviya-sri-a-n-202058204/">Kaviya Sri</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1263,143 +1283,152 @@
                 <div class="tr">
                   <div class="td idx">
                     <div>
-                      <p>4:00 PM - 4:45 PM</p>
+                      <p>4:10 PM - 4:30 PM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Serverless: Beyond Lambda Functions</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/srushith/">Srushith Repakula</a></p>
-                    </div>
-                  </div>
-
-                  <div class="td" colspan="4">
-                    <div>
-                      <p>Linear TV Broadcast Playout - On-demand Disaster Recovery</p>
-                      <p><a target="_blank" href="https://www.linkedin.com/in/vijayasagar/">Vijaya Sagar Vinnakota</a> & <a target="_blank" href="https://www.linkedin.com/in/malaniarpit/">Arpit Malani</a></p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tr">
-                  <div class="td idx">
-                    <div>
-                      <p>4:45 PM - 5:15 PM</p>
+                      <p>Life is what YOU make it!</p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/sandeepkanabar/">Sandeep Kanabar</a></p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
-                    <div>
-                      <p>Quiz Winners</p>
-                    </div>
-                  </div>
-
-                  <div class="td" colspan="4">
-                    <div>
-                      <p>Closing Notes</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="tr gap">
-                  <div class="td idx">
                     <div>
                       <p></p>
+                      <p><a target="_blank" href="https://www.linkedin.com/in/vijayasagar/"></a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>4:30 PM - 4:45 PM</p>
                     </div>
                   </div>
                   <div class="td" colspan="4">
                     <div>
-                      <p>Hope you had AWSome time. Don't forget to give us your feedback.</p>
+                      <p>Closing Note</p>
                     </div>
                   </div>
                 </div>
+
 
               </div>
             </div>
           </div>
         </div>
-        
-      </div>
-    </div> -->
 
-    <!-- <div class="section section-tickets text-center inv" id="workshop">
+      </div>
+    </div>
+
+    <div class="section section-tickets text-center inv" id="workshop">
       <div class="container">
         <h4 class="main-heading-ttl text-center">
-          <p>Online Workshops</p>          
+          <p>Online Workshops (12TH NOVEMBER)</p>
         </h4>
-        <div class="row flex-it">
-          
-          <div class="col-md-4">
+        <p>The ticket amount of Rs.500 will be refunded after the event post the attendee participation</p>
+        <div class="row flex-it" style="margin-top:20px">
+          <div class="col-md-4 col-sm-12">
             <div class="card tick_work_1 with_icon dark">
-              <h4 class="heading-ttl">Containers</h4>
+              <h4 class="heading-ttl">Build your own Serverless Food Delivery App in 3 hours!</h4>
               <div class="bg_img"></div>
-              <p>Gets you access to Containers Workshop </p>
-              <button type="button" data-toggle="modal" data-target="">Sold Out</button>
-              <button type="button">Announcing Soon</button>
+              <p> Leverage AWS Serverless services to build a simple food delivery app in less than 3 hours! </p>
+              <button type="button" data-toggle="modal" data-target="#serverless">Details</button>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-12">
             <div class="card tick_work_2 with_icon dark">
-              <h4 class="heading-ttl">Machine Learning</h4>
+              <h4 class="heading-ttl">Data and Analytics Engineering Workshop</h4>
               <div class="bg_img"></div>
-              <p>Gets you access to Machine Learning </p>
-              <button type="button" data-toggle="modal" data-target="">Sold Out</button>
-              <button type="button">Announcing Soon</button>
+              <p>Generate Insight by Breaking Data Silos on AWS </p>
+              <button type="button" data-toggle="modal" data-target="#data-anlytics">Details</button>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="card tick_work_3 with_icon">
-              <h4 class="heading-ttl">Serverless</h4>
+          <div class="col-md-4 col-sm-12">
+            <div class="card tick_work_3 with_icon dark">
+              <h4 class="heading-ttl">AWS Workshop for <br />AI/ML </h4>
               <div class="bg_img"></div>
-              <p>Gets you access to Serverless workshop </p>
-              <button type="button" data-toggle="modal" data-target="">Sold Out</button>
-              <button type="button">Announcing Soon</button>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card tick_work_4 with_icon dark">
-              <h4 class="heading-ttl">Alexa</h4>
-              <div class="bg_img"></div>
-              <p>Gets you access to Alexa Workshop </p>
-              <button type="button" data-toggle="modal" data-target="">Closed</button>
-              
+              <p>Using Amazon SageMaker to Train & Deploy ScikitLearn ML Model and Integrate to API Gateway using AWS
+                Lambda Function </p>
+              <!-- <button type="button" data-toggle="modal" data-target="#aiml">Details</button>  -->
+              <a href="#aiml">
+                <button type="button" data-toggle="modal" data-target="#aiml">Details</button>
+              </a>
+
             </div>
           </div>
         </div>
       </div>
-    </div> -->
-
-    <!-- <div class="section-6 inv" id="Speakers" style="background-color: #eeeeee; color: #000000">
-      <h4 id="Keynote_Speakers" class="main-heading-ttl text-center" style="color:#232f3e;"> Keynote Speaker</h4><hr>
+    </div>
+    <div class="section section-tickets text-center inv" id="hackathon">
       <div class="container">
-        <div>
-					<div class="container" style="padding: 10px">
-						<div class="col-md-3  col-sm-12">
-							<div class="lb-grid lb-row lb-row-max-large lb-snap lb-gutter-mid">
-								<div class="lb-tiny-24 lb-mid-6">
-									<figure class="lb-img">
-										<div>
-											<img class="speakers-img" alt="Jeff Barr" title="Jeff Barr" src="images/speakers/jeffbarr.jpg" style="border-radius: 25px;">
-										</div>
-									</figure>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-9  col-sm-12">
-							<div class="mt-5"><h3 style="color: #555">Jeff Barr, Chief Evangelist, AWS</h3></div>
-							<p class=" text-justify" style="color: #555">
-                As Chief Evangelist for the Amazon Web Services, Jeff gets to tell the AWS story to audiences all over the world. Jeff talks, blogs, record videos, and spreads the word via social media. 
-                <br><br>
-                His main work product is the AWS Blog which he has been writing since the fall of 2004. In this role, Jeff works with the product teams to create interesting, informative, and technically accurate blog posts to highlight the latest and greatest AWS offerings. Jeff has written over 2,500 posts (well over a million words) and currently averages one finished post per calendar day.
-							</p>
-						</div>
-					</div>					
-				</div>
+        <h4 class="main-heading-ttl text-center">
+          <p>Hackathon</p>
+        </h4>
+        <div class="row flex-it" style="justify-content:center">
+          <div class="container">
+            <div>
+              <div class="container" style="padding: 10px">
+                <div class="col-md-8 col-sm-12">
+                  <!-- <div class="mt-5"><h3 style="color: #555">AWSomeify Hackathon</h3></div> -->
+                  <p class=" text-justify" style="color: #555">
+                    We invite you to participate in the AWSomeify Hackathon to develop solutions make technical developer community a great experience for everyone to win a prize pool of 70,000 INR!
+                  </p>
+                  <br>
+                  <p class=" text-justify" style="color: #555">
+                    This hackathon is open to individuals and team size of maximum 4 members. Whether you are new to hackathons or AWS, do not worry, we have a panel of mentors to guide you on technical and non-technical implementation. If you are an individual and looking to form a team, then head to our Discord channel and find your like-minded people to build stuff!
+                  </p>
+                  <a href="https://awsomeify.devpost.com/" target="_blank" style="display:flex; margin-top:10px"> 
+                    <button style="margin-bottom: 10px">Know More</button>
+                  </a>
+                </div>
+                <div class="col-md-4  col-sm-12">
+                  <div class="lb-grid lb-row lb-row-max-large lb-snap lb-gutter-mid">
+                    <div class="lb-tiny-24 lb-mid-6">
+                      <figure class="lb-img">
+                        <div>
+                          <img class="speakers-img" alt="Jeff Barr" title="Jeff Barr" src="images/hackathon.png" style="border-radius: 25px; width: 60%">
+                        </div>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>					
+            </div>
+          </div>
+        </div>
       </div>
-    </div> -->
+    </div>
 
-    <div class="section section-5" id="sponsors">
+    <div class="section section-5" id="sponsors" style="box-shadow: none; padding-bottom:0px">
+      <div class="container">
+        <div class="sponsors">
+          <h4 class="main-heading-ttl text-center">Sponsors</h4>
+          <div class="cats">
+            <div class="cmnty">
+              <div class="row platinum" style="text-align:center">
+                <h2>Platinum</h2>
+                <div class="flex-it sponser-list sponsor-addition">
+
+                  <div class="f1">
+                    <div class="sponsor">
+                      <a href="https://coralogix.com/" target="_blank">
+                        <img src="images/spons/coralogix.png">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-5" id="communityPartners" style="box-shadow: none">
       <div class="container">
         <div class="sponsors">
           <h4 class="main-heading-ttl text-center">Our Community Partners</h4>
@@ -1410,19 +1439,40 @@
                   <div class="head"><span>Community</span></div>
                 </div> -->
                 <div class="f1">
+                  <div class="cloud-tech" style="background-size:40%;">
+                    <a href="https://www.linkedin.com/company/cloud-techs/" target="_blank">CloudTech</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="DevOps-Community">
+                    <a href="https://twitter.com/i/communities/1523681883384549376?t=kM084cCtnN0YFEc5nfXIIQ&s=09"
+                      target="_blank">DevOps Community</a>
+                  </div>
+                </div>
+                <div class="f1">
                   <div class="docker-bglore">
                     <a href="https://www.meetup.com/docker-bangalore/?_cookie-check=YfyavpJkGZzmmyFp"
                       target="_blank">Docker Bangalore</a>
                   </div>
                 </div>
                 <div class="f1">
-                  <div class="re-skill">
-                    <a href="https://awsreskill.com/" target="_blank">re:Skill</a>
+                  <div class="js-lovers" style="background-size:40%;">
+                    <a href="https://www.meetup.com/jslovers/" target="_blank">JSLovers</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="Keep-Up">
+                    <a href="https://www.linkedin.com/company/trainings-internships/" target="_blank">Keep Up</a>
                   </div>
                 </div>
                 <div class="f1">
                   <div class="PyLadies" style="background-size:50%;">
-                    <a href="https://twitter.com/pyladiesblr" target="_blank">re:Skill</a>
+                    <a href="https://twitter.com/pyladiesblr" target="_blank">PyLadies</a>
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="re-skill">
+                    <a href="https://awsreskill.com/" target="_blank">re:Skill</a>
                   </div>
                 </div>
                 <!-- <div class="f1">
@@ -1441,7 +1491,7 @@
       <div class="container">
         <div class="speakers">
           <h4 class="main-heading-ttl text-center">Speakers</h4>
-          <div class="col-md-12 col-sm-12">
+          <!-- <div class="col-md-12 col-sm-12">
             <div class="about-intro-1">
               <p>
                 We’re excited to open the Call for Proposals for AWS Community Day India Virtual Edition 2022! We are
@@ -1499,206 +1549,306 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- <div class="spk_lst flex-it">
+          </div> -->
+          <div class="spk_lst flex-it">
             <div class="spk_itm_col">
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/abeshr.jpg">                  
+                  <img src="images/speakers/Bhuvaneswari.png">
                 </div>
                 <div class="namenid">
-                  <p>                    
-                    <b>Abesh Rajasekharan</b>                    
-                    <br/>
-                    <small>Senior Engineering Manager, Thomson Reuters</small>
-                    <br><small>Hyderabad, India</small>                    
+                  <p>
+                    <b>Bhuvaneswari Subramani</b>
+                    <br />
+                    <small>Passionate about technology, training and technical writing</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/abesh-rajasekharan-3313b525/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/bhuvanas/"><i class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/swapniljakhetia.png">
+                  <img src="images/speakers/chris.jpg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Swapnil Jakhetia</b>
-                    <br/>
-                    <small>Solution Architect, Blazeclan</small>
-                    <br><small>Pune, India</small>
+                    <b>Chris Cooney</b>
+                    <br />
+                    <small>Developer Advocate, Coralogix</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://in.linkedin.com/in/swapnil-jakhetia-2b91692a"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/chris-cooney-06751870/"><i
+                      class="icon large ion-logo-linkedin"></i></a>
+                </div>
+              </div>
+
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im">
+                  <img src="images/speakers/gaurav_kumar.jpeg">
+                </div>
+                <div class="namenid">
+                  <p>
+                    <b>Gaurav Kumar</b>
+                    <br />
+                    <small>Cloud Solution Architect at NatWest</small>
+                  </p>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/gaurav-kumar-a5298493/"><i
+                      class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/srushithr.jpg">
+                  <img src="images/speakers/gomathi.jpg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Srushith Repakula</b>
-                    <br/>
-                    <small>Head of Engineering, KonfHub</small>
-                    <br><small>Bengaluru, India</small>
+                    <b>Gomathi P</b>
+                    <br />
+                    <small>Lead Data Engineer, Vyaire Medical</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/srushith/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/gomathi-p-b703a94b/"><i
+                      class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/mayank.png">
+                  <img src="images/speakers/ilanchezhian.jpg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Mayank Raj</b>
-                    <br/>
-                    <small>Solutions Architect, Cactus Labs</small>
-                    <br><small>Mumbai, India</small>
+                    <b>Ilanchezhian Ganesamurthy</b>
+                    <br />
+                    <small>Principal Architect, EVRY India</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/mayank9856/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/ilanchezhian/"><i class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/tusharg.jpeg">
+                  <img src="images/speakers/sessions/jeremy-daly.jpg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Tushar Gupta</b>
-                    <br/>
-                    <small>Senior Cloud Consultant - APAC, SoftwareONE</small>
-                    <br><small>Gurgaon, India</small>
+                    <b>Jeremy Daly</b>
+                    <br />
+                    <small>AWS Serverless Hero</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/tusharguptaa/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/jeremydaly/"><i class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/mikechambers.jpg">
+                  <img src="images/speakers/kaviya_sri.jpeg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Mike Chambers</b>
-                    <br/>
-                    <small>AWS ML Hero, Course Creator, mikegchambers.com</small>
-                    <br><small>Brisbane, Australia</small>
+                    <b>Kaviya sri</b>
+                    <br />
+                    <small>III Year Student CSE (Specialization in AI and ML)</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/mikegchambers/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/kaviya-sri-a-n-202058204/"><i
+                      class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/vijayanirmalakumar.png">
+                  <img src="images/speakers/rohini.jpeg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Vijaya Nirmala Gopal</b>
-                    <br/>
-                    <small>Hybrid Cloud Specialist, IBM GTS Labs</small>
-                    <br><small>Bengaluru, India</small>
+                    <b>Rohini Gaonkar</b>
+                    <br />
+                    <small>Senior Developer Advocate, Amazon Web Services (AWS)</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/vijayanirmalagopal-5a54159a/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/rohinigaonkar/"><i class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/kapilgambhir.jpg">
+                  <img src="images/speakers/Nori.png">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Kapil Gambhir</b>
-                    <br/>
-                    <small>Enterprise Solution Architect, Amazon India Pvt. Ltd.</small>
-                    <br><small>Delhi, India</small>
+                    <b>Noritaka Sekiyama</b>
+                    <br />
+                    <small>Principal Big Data Architect, AWS Glue</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/kapil-gambhir-337a0b4/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/moomindani/"><i class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/yogesh.jpeg">
+                  <img src="images/speakers/pavan.jpeg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Yogesh Sharma</b>
-                    <br/>
-                    <small>Cloud Architect, TCS</small>
-                    <br><small>Sydney, Australia</small>
+                    <b>Pavan Gumaste</b>
+                    <br />
+                    <small>Cloud Architect, Platform Developement, Hands On Labs, Product Manager at Whizlabs</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/sharma-yogesh/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/pavan-gumaste-39556755/"><i
+                      class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/swaroop.png">
+                  <img src="images/speakers/prahalathan.jpeg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Swaroop Hegde</b>
-                    <br/>
-                    <small>Co-Founder, BlockVigil</small>
-                    <br><small>San Francisco, US</small>
+                    <b>Prahalathan Muralidharan</b>
+                    <br />
+                    <small>Lead Fullstack Engineer, Vyaire Medical</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/swaroophegde/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/praha24/"><i class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/vijayasagar.jpeg">
+                  <img src="images/speakers/sandeep.jpeg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Vijaya Sagar Vinnakota</b>
-                    <br/>
-                    <small>Cloud Engineering, Amagi Media Labs</small>
-                    <br><small>Bengaluru, India</small>
+                    <b>Sandeep Kanabar</b>
+                    <br />
+                    <small>Senior Princ Software Engineer, NortonLifeLock</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/vijayasagar/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/sandeepkanabar/"><i class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/arpitmalani.jpg">
+                  <img src="images/speakers/sandip.jpg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Arpit Malani</b>
-                    <br/>
-                    <small>Engineering Manager, Amagi Media Labs</small>
-                    <br><small>Bengaluru, India</small>
+                    <b>Sandip Das</b>
+                    <br />
+                    <small>Senior Cloud & DevOps Engineer</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/malaniarpit/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/sandip-das-developer/"><i
+                      class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
               <div class="spk_itm flex-it">
                 <div class="prod_im">
-                  <img src="images/speakers/sessions/sapna-singh.jpeg">
+                  <img src="images/speakers/sarbani.jpeg">
                 </div>
                 <div class="namenid">
                   <p>
-                    <b>Sapna Singh</b>
-                    <br/>
-                    <small>Cyber Security Professional and advocate to "Women in Cyber Security"</small>
-                    <br><small>Kuwait</small>
+                    <b>Sarbani Maiti</b>
+                    <br />
+                    <small>Vice President |Data Science | Machine Learning | Cloud | MLOps | AWS Community
+                      Builder</small>
                   </p>
-                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;" href="https://www.linkedin.com/in/sapna-singh-cissp-ccsk-msclis-86479626/"><i class="icon large ion-logo-linkedin"></i></a>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/sarbani-maiti-35b89111/"><i
+                      class="icon large ion-logo-linkedin"></i></a>
                 </div>
               </div>
 
-            </div>            
-          </div> -->
+              <div class="spk_itm flex-it">
+                <div class="prod_im">
+                  <img src="images/vols/Sathyajith.png">
+                </div>
+                <div class="namenid">
+                  <p>
+                    <b>Sathyajith Bhat</b>
+                    <br />
+                    <small>Staff SRE, The Trade Desk</small>
+                  </p>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://linkedin.com/in/sathyabhat"><i class="icon large ion-logo-linkedin"></i></a>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im">
+                  <img src="images/speakers/shefali.jpeg">
+                </div>
+                <div class="namenid">
+                  <p>
+                    <b>Shefali Arora</b>
+                    <br />
+                    <small>Director, Rashiv Cloud Solutions</small>
+                  </p>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/shefali-arora-9a6a2a10"><i
+                      class="icon large ion-logo-linkedin"></i></a>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im">
+                  <img src="images/speakers/suman.jpeg">
+                </div>
+                <div class="namenid">
+                  <p>
+                    <b>Suman Debnath</b>
+                    <br />
+                    <small>Principal Developer Advocate, Data Engineering and Analytics @ AWS</small>
+                  </p>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/suman-d/"><i class="icon large ion-logo-linkedin"></i></a>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im">
+                  <img src="images/speakers/tanmoy.jpeg">
+                </div>
+                <div class="namenid">
+                  <p>
+                    <b>Tanmoy Roy</b>
+                    <br />
+                    <small> (PhD) Data Science Consultant at Veersa Technology</small>
+                  </p>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/tanmoy-roy-328b592b"><i
+                      class="icon large ion-logo-linkedin"></i></a>
+                </div>
+              </div>
+
+              <div class="spk_itm flex-it">
+                <div class="prod_im">
+                  <img src="images/speakers/sessions/yan-cui.png">
+                </div>
+                <div class="namenid">
+                  <p>
+                    <b>Yan Cui</b>
+                    <br />
+                    <small>Developer Advocate at Lumigo</small>
+                  </p>
+                  <a target="_blank" style="position: absolute; top: 10px; right: 44px;"
+                    href="https://www.linkedin.com/in/theburningmonk"><i class="icon large ion-logo-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1715,69 +1865,54 @@
                     <i class="icon large ion-logo-linkedin"></i>@abu-tahir-bb05741a2</a>
                 </div>
               </div>
-              <!-- <div class="person" data-fname="Anurag" data-lname="Kale">
-                <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/anuragkale/">
-                    <i class="icon large ion-logo-linkedin"></i>@anuragkale</a>
-                </div>
-              </div>     -->
               <div class="person" data-fname="Amandeep" data-lname="Singh">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/amandeep-singh-bajwa/">
                     <i class="icon large ion-logo-linkedin"></i>@amandeep-singh-bajwa</a>
                 </div>
               </div>
-              <!-- <div class="person" data-fname="Bhuvaneswari" data-lname="Subramani">
+              <!-- <div class="person" data-fname="Ankit Kumar" data-lname="Gupta">
                 <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/bhuvanas/">
-                    <i class="icon large ion-logo-linkedin"></i>@bhuvanas</a>
+                  <a target="_blank" href="https://www.linkedin.com/in/akgprogrammer">
+                    <i class="icon large ion-logo-linkedin"></i>@akgprogrammer</a>
                 </div>
-              </div> -->
-              <!-- <div class="person" data-fname="Dhaval" data-lname="Nagar">
+              </div>   -->
+              <div class="person" data-fname="Avinash" data-lname="Dalvi">
                 <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/dhavaln/">
-                    <i class="icon large ion-logo-linkedin"></i>@dhavaln</a>
+                  <a target="_blank" href="https://www.linkedin.com/in/avinash-dalvi-315b021a/">
+                    <i class="icon large ion-logo-linkedin"></i>@avinash-dalvi-315b021a</a>
                 </div>
-              </div> -->
-              <!-- <div class="person" data-fname="Dijeesh" data-lname="Padinharethil">
+              </div>
+              <div class="person" data-fname="Dhruv" data-lname="Aggarwal">
                 <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/dijeesh-padinharethil/">
-                    <i class="icon large ion-logo-linkedin"></i>@dijeesh-padinharethil</a>
+                  <a target="_blank" href="https://www.linkedin.com/in/dhruv-a-305713173">
+                    <i class="icon large ion-logo-linkedin"></i>@dhruv-aggarwal</a>
                 </div>
-              </div> -->
+              </div>
               <div class="person" data-fname="Dipali" data-lname="Kulshrestha">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/dipalik/">
                     <i class="icon large ion-logo-linkedin"></i>@dipalik</a>
                 </div>
               </div>
-              <!-- <div class="person" data-fname="Gaurav" data-lname="Kamboj">
+              <!-- <div class="person" data-fname="Gagan">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/gagandeep-gawri/">
+                    <i class="icon large ion-logo-linkedin"></i>@gagandeep-gawri</a>
+                </div>
+              </div> -->
+              <div class="person" data-fname="Gaurav Kamboj">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/gauravkamboj/">
                     <i class="icon large ion-logo-linkedin"></i>@gauravkamboj</a>
                 </div>
-              </div> -->
-              <!-- <div class="person" data-fname="Gokul" data-lname="Karthik">
-                <div class="img"></div>
-              </div> -->
+              </div>
               <div class="person" data-fname="Hari priya" data-lname="Satrasala">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/satrasala-hari-priya/">
-                    <i class="icon large ion-logo-linkedin"></i>@jayesh-ahire</a>
-                </div>
-              </div>
-              <!-- <div class="person" data-fname="Jayesh" data-lname="Ahire">
-                <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/jayesh-ahire/">
                     <i class="icon large ion-logo-linkedin"></i>@satrasala-hari-priya</a>
                 </div>
-              </div> -->
-              <!-- <div class="person" data-fname="Jeevan" data-lname="Dongre">
-                <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/jeevandongre/">
-                    <i class="icon large ion-logo-linkedin"></i>@jeevandongre</a>
-                </div>
-              </div> -->
+              </div>
               <div class="person" data-fname="Jatin" data-lname="Mehrotra">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/jatinmehrotra/">
@@ -1790,16 +1925,16 @@
                     <i class="icon large ion-logo-linkedin"></i>@neetu-mallan-04b93694</a>
                 </div>
               </div>
-              <!-- <div class="person" data-fname="Nilesh" data-lname="Vaghela">
-                <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/nilesh-vaghela/">
-                    <i class="icon large ion-logo-linkedin"></i>@nilesh-vaghela</a>
-                </div>
-              </div> -->
               <div class="person" data-fname="Nipun" data-lname="Parekh">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/nipun-parekh-6006a0152/">
                     <i class="icon large ion-logo-linkedin"></i>@nipun-parekh-6006a0152</a>
+                </div>
+              </div>
+              <div class="person" data-fname="Parth Purvesh" data-lname="">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/czynot">
+                    <i class="icon large ion-logo-linkedin"></i>@czynot</a>
                 </div>
               </div>
               <!-- <div class="person" data-fname="Parthasarathi" data-lname="Balasubramanian">
@@ -1808,15 +1943,12 @@
                     <i class="icon large ion-logo-linkedin"></i>@parthasarathi-b</a>
                 </div>
               </div> -->
-              <div class="person" data-fname="Parth Purvesh" data-lname="">
+              <div class="person" data-fname="Piyush Jalan" data-lname="">
                 <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/czynot">
-                    <i class="icon large ion-logo-linkedin"></i>@czynot</a>
+                  <a target="_blank" href="https://www.linkedin.com/in/piyush-jalan/">
+                    <i class="icon large ion-logo-linkedin"></i>@piyush-jalan</a>
                 </div>
               </div>
-              <!-- <div class="person" data-fname="PhaniKumar" data-lname="Balasubramanian">
-                <div class="img"></div>
-              </div> -->
               <div class="person" data-fname="Ragavendran" data-lname="Chandrasekaran">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/ragavhadoop/">
@@ -1829,18 +1961,24 @@
                     <i class="icon large ion-logo-linkedin"></i>@rajat-arora</a>
                 </div>
               </div>
-              <!-- <div class="person" data-fname="Sathyajith" data-lname="Bhat">
+              <div class="person" data-fname="Ramya" data-lname="Natesan">
                 <div class="img">
-                  <a target="_blank" href="https://www.linkedin.com/in/sathyabhat/">
-                    <i class="icon large ion-logo-linkedin"></i>@sathyabhat</a>
+                  <a target="_blank" href="https://www.linkedin.com/in/ramya-natesan-67499711a/">
+                    <i class="icon large ion-logo-linkedin"></i>@ramya-natesan-67499711a</a>
+                </div>
+              </div>
+              <!-- <div class="person" data-fname="Ritesh" data-lname="Bhardwaj">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/ritesh-bhardwaj/">
+                    <i class="icon large ion-logo-linkedin"></i>@ritesh-bhardwaj</a>
                 </div>
               </div> -->
-              <div class="person" data-fname="Sabarinath" data-lname="S">
+              <!-- <div class="person" data-fname="Sabarinath" data-lname="S">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/sabarinath0702/">
                     <i class="icon large ion-logo-linkedin"></i>@sabarinath0702</a>
                 </div>
-              </div>
+              </div> -->
               <div class="person" data-fname="Sanchit" data-lname="Jain">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/sanchitdilipjain/">
@@ -1865,22 +2003,41 @@
                     <i class="icon large ion-logo-linkedin"></i>@thesubhradip</a>
                 </div>
               </div>
-              <div class="person" data-fname="Sukanya" data-lname="Mandal">
+              <!-- <div class="person" data-fname="Sukanya" data-lname="Mandal">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/sukanyamandal/">
                     <i class="icon large ion-logo-linkedin"></i>@sukanyamandal</a>
                 </div>
+              </div> -->
+              <div class="person" data-fname="Tajinder" data-lname="Singh">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/tajinder-singh-aa25464/">
+                    <i class="icon large ion-logo-linkedin"></i>@tajinder-singh-aa25464</a>
+                </div>
               </div>
-              <div class="person" data-fname="Vibhu" data-lname="B">
+              <!-- <div class="person" data-fname="Vedant" data-lname="Kakde">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/vedant-kakde/">
+                    <i class="icon large ion-logo-linkedin"></i>@vedant-kakde</a>
+                </div>
+              </div> -->
+              <!-- <div class="person" data-fname="Vibhu" data-lname="B">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/vibzonline">
                     <i class="icon large ion-logo-linkedin"></i>@vibzonline</a>
                 </div>
-              </div>
+              </div> -->
+
               <div class="person" data-fname="Vivek Raja" data-lname="P S">
                 <div class="img">
                   <a target="_blank" href="https://www.linkedin.com/in/vivek0712/">
                     <i class="icon large ion-logo-linkedin"></i>@vivek0712</a>
+                </div>
+              </div>
+              <div class="person" data-fname="VijayaNirmala">
+                <div class="img">
+                  <a target="_blank" href="https://www.linkedin.com/in/vijayanirmalagopal-5a54159a">
+                    <i class="icon large ion-logo-linkedin"></i>@vijayanirmalagopal-5a54159a</a>
                 </div>
               </div>
             </div>
@@ -1973,7 +2130,8 @@
             </div>
 
             <div class="group">
-              <button id="otp-button" type="button" style="margin-bottom: 10px; width: 100%;" class="d-none">Send
+              <button id="otp-button" type="button" style="margin-bottom: 10px; width: 100%;" class="d-none"
+                disabled>Send
                 OTP</button>
               <div>
                 <input name="otp" placeholder="OTP*" type="text" maxlength="4" id="form-reg-otp"
@@ -2083,8 +2241,362 @@
     </div>
   </div>
 
+  <div id="serverless" class="modal fade fillo" role="dialog" tabindex='-1'>
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="heading-ttl">
+            <p>Build your own Serverless Food Delivery App in 3 hours!</p>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <p class="heading-ttl small-head">Goal</p>
+          <p> Leverage AWS Serverless services to build a simple food delivery app in less than 3 hours!
+          </p>
+
+          <p class="heading-ttl small-head">Abstract</p>
+          <p>In this workshop, you will architect, develop and deploy a simple food delivery application that enables
+            users to order food from the app using services like <b>AWS Lambda, Amazon API Gateway, Amazon S3, Amazon
+              DynamoDB, Amazon EventBridge, and Amazon Cognito.</b>
+            With the knowledge from the workshop, you can build and deploy your own serverless applications using these
+            services for common use cases like web applications, analytics, and more.
+
+          </p>
+
+          <p class="heading-ttl small-head">Description</p>
+          <p>Who doesn’t love food? Who doesn’t love the comfort of ordering food from our couch? And as curious
+            engineers, we all love the technology that goes behind building such amazing apps. What if we could build
+            something similar (basic and not a full-blown app :)) in less than 3 hours? This is the power of Serverless
+            - building highly scalable, highly available, and cost-effective applications!
+          </p>
+          <br />
+          <p>
+            In this workshop, we will understand how easy & quick it is to build real-world applications using
+            Serverless on AWS and understand the various services that can be leveraged. The application will present
+            users with a React user interface for ordering food items. The interface on the backend with RESTful and
+            WebSocket services will accept the request, and find and dispatch food to the requester’s location. The
+            application will also provide facilities for users to register with the service and log in before ordering
+            food.
+          </p>
+          <p class="heading-ttl small-head">AWS Services Covered:</p>
+          <p class="ml-2">1. The frontend of the application will be hosted on Amazon S3, with CDN enabled using Amazon
+            CloudFront</p>
+          <p class="ml-2">2.The backend of the application will be entirely driven by AWS Lambda functions
+          </p>
+          <p class="ml-2">3. Amazon EventBridge will be used for inter-communication across different microservices
+          </p>
+          <p class="ml-2">4. Amazon API Gateway for REST and WebSocket APIs
+          </p>
+          <p class="ml-2">5. Amazon CloudWatch & AWS X-Ray for monitoring, observability, and debugging
+          </p>
+          <p class="ml-2">6. Amazon Cognito for user management, authentication and authorization</p>
+          <p class="ml-2">7. DynamoDB for the storage</p>
+
+          <p class="heading-ttl small-head">AWS Account</p>
+          <p>In order to complete this workshop you'll need an AWS Account with access to create IAM, S3, DynamoDB,
+            Lambda, EventBridge, API Gateway, and Cognito resources. All of the resources you will launch as part of
+            this workshop are eligible for the AWS free tier if your account is less than 12 months old. See the AWS
+            Free Tier page for more details.</p>
+
+          <p class="heading-ttl small-head">Essential React & NodeJS knowledge</p>
+          <p>The front end is built on React, and the backend code is written in NodeJS; hence working knowledge is
+            needed of these languages is for this workshop.</p>
+
+          <p class="heading-ttl small-head">Speakers</p>
+          <div class="row align-vertical">
+            <div class="col-md-2">
+              <img class="workhsop-speaker speakerImg" src="images\speakers\Dipali.png" alt="speaker img">
+            </div>
+            <div class="col-md-3">
+              <div id="align" class="align-vertical">
+                <h4><a href="https://www.linkedin.com/in/dipalik/" style="color:#ff9900" target="_blank">Dipali
+                    Kulshrestha</a></h4>
+                <p><a href="https://www.natwestgroup.com/" target="_blank">Natwest Group</a></p>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <img class="workhsop-speaker speakerImg" src="images/vols/rajat-arora.jpeg" alt="speaker img">
+            </div>
+            <div class="col-md-3">
+              <div id="align1" class="align-vertical">
+                <h4><a href="https://www.linkedin.com/in/rajat-arora-77308414/" style="color:#ff9900"
+                    target="_blank">Rajat Arora</a></h4>
+                <p style="margin-top:-1px;"> <a href="https://www.natwestgroup.com/" target="_blank">Natwest Group</a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row align-vertical">
+
+            <div class="col-md-2">
+              <img class="workhsop-speaker speakerImg" src="images/workshop/rashmi.jpg" alt="speaker img">
+            </div>
+            <div class="col-md-3">
+              <div id="align1" class="align-vertical">
+                <h4><a href="https://www.linkedin.com/in/rashmisubhash/" style="color:#ff9900" target="_blank">Rashmi
+                    Subhash</a></h4>
+                <p style="margin-top:-1px;"> <a href="https://konfhub.com/" target="_blank">KonfHub</a></p>
+              </div>
+            </div>
+
+
+            <div class="col-md-2">
+              <img class="workhsop-speaker speakerImg" src="images/Srushith.jpg" alt="speaker img">
+            </div>
+            <div class="col-md-3">
+              <div id="align1" class="align-vertical">
+                <h4><a href="https://www.linkedin.com/in/srushith/" style="color:#ff9900" target="_blank">Srushith R</a>
+                </h4>
+                <p style="margin-top:-1px;"> <a href="https://konfhub.com/" target="_blank">KonfHub</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="modal-footer">
+        <button id="serverless-workshop" class="btn register-form-submit-btn">Register</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div id="data-anlytics" class="modal fade fillo" role="dialog" tabindex='-1'>
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="heading-ttl">
+            <p>Data and Analytics Engineering Workshop</p>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <p class="heading-ttl small-head">Goal</p>
+          <p>Generate Insight by Breaking Data Silos on AWS!</p>
+
+
+          <p class="heading-ttl small-head">Abstract</p>
+          <p class="ml-2">● Data is the underlying force that fuels the insights and predictions that result in better
+            decision-making and innovation.
+          </p>
+          <p class="ml-2">● In this workshop, learn how to use data to reinvent your strategy now and in the future.
+            We explore how to build a modern data strategy blueprint that will help you manage,
+            access, analyze, and act on data
+          </p>
+          <p class="ml-2">● With the knowledge from the workshop and exposure to different AWS Data services,
+            you can replicate them for any enterprise use case.</p>
+
+          <p class="heading-ttl small-head">Description</p>
+          <p class="ml-2">● This workshop will focus on hands-on labs and modules that focus on ingestion,
+            hydration, exploration, and consumption of data in a data lake in AWS.</p>
+          <p class="ml-2">● It includes hands-on time with AWS analytics services, including AWS Data Migration
+            service for batch data ingestion, AWS Glue for data catalog and running ETL on Data lake,
+            Amazon Athena to query data lake, and Amazon Quicksight for visualization.
+          </p>
+          <p class="ml-2">● The workshops provided here will guide you through creating a modern data platform
+            on AWS and will demonstrate the fundamental principles:
+          <p class="pl-2">1. Scalable Data Lakes</p>
+          <p class="pl-2">2. Purpose Built Data Services</p>
+          <p class="pl-2">3. Seamless Data Movement</p>
+          <p class="pl-2">4. Easy Data Visualization</p>
+          <p class="pl-2">5. Performant and Cost-Effective</p>
+          </p>
+
+          <p class="heading-ttl small-head">Target Audience</p>
+          <p class="ml-2">● Engineers
+          </p>
+          <p class="ml-2">● Business Analytics
+          </p>
+          <p class="ml-2">● Data Analysts</p>
+
+          <p class="heading-ttl small-head">AWS Account (BYOA - bring your own account): </p>
+          <p class="ml-2">● To complete this workshop, you'll need an AWS Account with full access to create
+            different AWS services like Amazon RDS, Amazon S3, AWS Glue, Amazon Athena, Amazon
+            Quicksight, AWS StepFunctions, and AWS Airflow Managed Service.
+          </p>
+          <p class="ml-2">● See the <a
+              href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/"
+              target="_blank">
+              AWS page</a> & <a href="https://www.youtube.com/watch?v=WviHsoz8yHk" target="_blank">video tutorial</a>
+            for details on deploying the new AWS Account.
+          </p>
+
+          <p class="heading-ttl small-head">Agenda</p>
+
+          <table style="width:100%">
+            <tr>
+              <th>Sr No</th>
+              <th>Topic</th>
+              <th>Lab</th>
+              <th>Duration</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Overview of Data
+                Analytics on AWS</td>
+              <td>NA</td>
+              <td>30 mins</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Data Ingestion
+              </td>
+              <td>Amazon RDS Postgres database to an
+                Amazon S3 bucket</td>
+              <td>30 mins</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Data Transformation &
+                Storage</td>
+              <td>Transforming data with Glue ( Bookmarks,
+                Workflow, Catalog) & Configure Athena
+                tables</td>
+              <td>30 mins</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Data Query</td>
+              <td>Configure Athena tables</td>
+              <td>15 mins</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Data Visualisation</td>
+              <td>Configure Quicksight and connect with
+                Athena</td>
+              <td>30 mins</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Orchestration</td>
+              <td>Exploring AWS StepFunction <br /> Exploring AWS StepFunction</td>
+              <td>15 mins<br /> 15 mins</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Summary</td>
+              <td>NA</td>
+              <td>15 mins</td>
+            </tr>
+          </table>
+
+          <p class="heading-ttl small-head">Outcome:</p>
+          <p class="ml-2">● Presentation covering Overview of AWS DNA services
+          </p>
+          <p class="ml-2">● Lab Manual to execute the workshop offline step by step
+          </p>
+          <p class="ml-2">● Automation scripts to provision any prerequisite required for performing the lab on
+            AWS, like deploying AWS IAM and other services like AWS S3.</p>
+          <p class="ml-2">● Best practice for handling AWS Account</p>
+
+          <p class="heading-ttl small-head">Speakers</p>
+          <div class="row align-vertical">
+            <div class="col-md-2">
+              <img class="workhsop-speaker speakerImg" src="images/workshop/sachit.jpg" alt="speaker img">
+            </div>
+            <div class="col-md-3">
+              <div id="align" class="align-vertical">
+                <h4><a href="https://www.linkedin.com/in/sanchitdilipjain/" style="color:#ff9900" target="_blank">Sachit Jain</a></h4>
+                <p><a href="https://quantiphi.com/" target="_blank">Quantiphi</a></p>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button id="data-analytics-workshop" class="btn register-form-submit-btn">Register</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="aiml" class="modal fade fillo" role="dialog" tabindex='-1'>
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="heading-ttl">
+            <p>AWS Workshop for AI/ML </p>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <p class="heading-ttl small-head">Goal</p>
+          <p>Using Amazon SageMaker to Train & Deploy ScikitLearn ML Model and Integrate to API Gateway using AWS Lambda Function</p>
+          
+          <p class="heading-ttl small-head">ABSTRACT</p>
+          <p class="ml-2">- In this workshop, You will learn how to train, develop and deploy Machine Learning model. How AWS Services can be leveraged to create a production ready Machine Learning model.</p>
+          <p class="ml-2">- You will practice using Amazon SageMaker Instance, S3 Bucket, API Gateway, Lambda Function services.</p>
+
+          <p class="heading-ttl small-head">Description</p>
+          <p class="ml-2">- Machine Learning is something which is always constrained to data scientists. It is always difficult as an individual to carry out many complex Machine learning tasks in a normal environment.</p>
+          <p class="ml-2">- In this Workshop, We will understand how AWS Provides Cloud Environment to Create Machine Learning Models which have a very specific set of requirements.</p>
+          <p class="ml-2">- We will also learn to use AWS Lambda and API Gateway to expose the Machine Learning Details to Outside applications which can access them through REST APIs.</p>
+          
+          <p class="heading-ttl small-head">AWS SERVICES COVERED</p>
+          <p class="ml-2">- The Machine Learning model with Python.</p>
+          <p class="ml-2">- We will be leveraging the ScikitLearn model for training.</p>
+          <p class="ml-2">- Amazon Sagemaker features such as Jupyter Notebooks, Training Jobs, Models and Endpoint configurations to run Machine Learning Trained models.</p>
+          <p class="ml-2">- Amazon S3 for storing and transferring data points.</p>
+          <p class="ml-2">- Creating Machine Learning Predictions using the Trained Library.</p>
+          <p class="ml-2">- AWS Lambda for Sagemaker communication.</p>
+          <p class="ml-2">- API Gateway for creating Rest APIs for Prediction Results.</p>
+          
+          <p class="heading-ttl small-head">AWS ACCOUNT</p>
+          <p class="ml-2">- Whizlabs will be providing AWS Platform for the workshop.</p>
+          <p class="ml-2">- Each workshop attendee will get a separate AWS Account for doing workshop from whizlabs.</p>
+          <p class="ml-2">- Zero Additional cost as the cloud environment is already created for you.</p>
+
+          <p class="heading-ttl small-head">ESSENTIAL KNOWLEDGE</p>
+          <p class="ml-2">- Basics in Python -- Codebase will be provided during workshop.</p>
+          <p class="ml-2">- Basic understanding in Machine Learning Concepts - It Helps.</p>
+          <p class="ml-2">- AWS Cloud services basics Understanding - Lambda, Sagemaker - You will be shown
+            how to use them as part of workshop.</p>
+          
+          <p class="heading-ttl small-head">OUTCOME</p>
+          <p class="ml-2">- Variety of features provided by Amazon Sagemaker.</p>
+          <p class="ml-2">- How Machine Learning models can be designed and developed on AWS.</p>
+          <p class="ml-2">- Understanding how to make the production ready APIs for Machine Learning
+            Predictions.</p>
+
+          <p class="heading-ttl small-head">Speakers</p>
+          <div class="row align-vertical">
+            <div class="col-md-2">
+              <img class="workhsop-speaker speakerImg" src="images/speakers/pavan.jpeg" alt="speaker img">
+            </div>
+            <div class="col-md-3">
+              <div id="align" class="align-vertical">
+                <h4><a href="https://www.linkedin.com/in/pavan-gumaste-39556755/" style="color:#ff9900" target="_blank">Pavan Gumaste</a></h4>
+                <p><a href="https://www.whizlabs.com" target="_blank">Whizlabs</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button id="aiml-workshop" class="btn register-form-submit-btn">Register</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Iframe RegisterIframe_4 Start  -->
-  <div id="RegisterIframe_4" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
+  <div id="containers" class="modal fade fillo RegisterIframe" role="dialog" tabindex='-1'>
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -2267,7 +2779,7 @@
     let specialChars = "<>@!#$?%^&*()+[]{}:;|'\"\\,./~`-";
     let checkForSpecialChar = function (string) {
       let _indexOf = string.length;
-      for (i = 0; i < specialChars.length; i++) {
+      for (i = 0;i < specialChars.length;i++) {
         if (string.indexOf(specialChars[i]) > -1) {
           _indexOf = _indexOf > string.indexOf(specialChars[i]) ? string.indexOf(specialChars[i]) : _indexOf
         }

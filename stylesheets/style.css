@@ -8,7 +8,13 @@ body {
   color: #555;
   font-size: 16px;
 }
-
+.modal-open{
+  position: fixed;
+  overflow: hidden;
+}
+.modal-body .section-tickets{
+  overflow-x: hidden;
+}
 /* line 6, ../sass/shared/_site.scss */
 body *:hover,
 body *:focus {
@@ -457,6 +463,7 @@ input[type="reset"].button-sm {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  margin-bottom: 23px;
 }
 
 /* line 158, ../sass/shared/_site.scss */
@@ -698,6 +705,7 @@ ul.circle li {
 /* line 299, ../sass/shared/_site.scss */
 .modal.in {
   pointer-events: all;
+  overflow-y:auto;
 }
 
 /* line 302, ../sass/shared/_site.scss */
@@ -724,6 +732,7 @@ ul.circle li {
 .modal.fillo .modal-header {
   background: #ff9900;
   color: #fff;
+  border-radius: 6px;
 }
 
 /* line 324, ../sass/shared/_site.scss */
@@ -738,6 +747,26 @@ ul.circle li {
   color: #ff9900;
 }
 
+.ml-2 {
+  margin-left: 20px;
+}
+
+.pl-2 {
+  margin-left: 40px;
+}
+
+table, table:hover {
+  border: 1.5px solid black;
+}
+
+th, td, th:hover, td:hover {
+  outline: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
 @media only screen and (min-width: 992px) {
 
   /* line 334, ../sass/shared/_site.scss */
@@ -750,7 +779,8 @@ ul.circle li {
 
   /* line 339, ../sass/shared/_site.scss */
   .modal.fillo .modal-body {
-    padding: 50px;
+    padding: 30px 50px;
+    overflow-x: hidden;
   }
 }
 
@@ -2104,6 +2134,11 @@ ul.circle li {
   margin-top: 50px;
 }
 
+#page .section-5 .sponsors .cats .sponsor-addition {
+  align-items: center;
+  margin-top: 40px;
+}
+
 @media only screen and (min-width: 992px) {
 
   /* line 590, ../sass/shared/_home.scss */
@@ -2419,6 +2454,15 @@ ul.circle li {
 /* line 795, ../sass/shared/_home.scss */
 #page .section-8 h4 {
   color: #fff;
+}
+
+.workhsop-speaker {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.align-vertical {
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -2825,7 +2869,7 @@ ul.circle li {
 
 /* line 994, ../sass/shared/_home.scss */
 #page .section-6 .volunteers .vl-i .person[data-fname="Ankit Kumar"] .img {
-  background-image: url(../images/vols/AnkitKumar.png);
+  background-image: url(../images/vols/ankit_kumar_gupta.jpeg);
 }
 
 /* line 997, ../sass/shared/_home.scss */
@@ -2855,6 +2899,10 @@ ul.circle li {
 /* line 1009, ../sass/shared/_home.scss */
 #page .section-6 .volunteers .vl-i .person[data-fname="Dipali"] .img {
   background-image: url(../images/vols/Dipali.png);
+}
+
+#page .section-6 .volunteers .vl-i .person[data-fname="Dhruv"] .img {
+  background-image: url(../images/vols/Dhruv_Aggarwal.png);
 }
 
 /* line 1012, ../sass/shared/_home.scss */
@@ -2914,7 +2962,12 @@ ul.circle li {
 #page .section-6 .volunteers .vl-i .person[data-fname="Rajat"] .img {
   background-image: url(../images/vols/rajat-arora.jpeg);
 }
-
+#page .section-6 .volunteers .vl-i .person[data-fname="Gagan"] .img {
+  background-image: url(../images/vols/gagan_gowri.jpeg);
+}
+#page .section-6 .volunteers .vl-i .person[data-fname="Gaurav Kamboj"] .img {
+  background-image: url(../images/vols/Gaurav.png);
+}
 #page .section-6 .volunteers .vl-i .person[data-fname="Hari priya"] .img {
   background-image: url(../images/vols/hari-priya.jpeg);
 }
@@ -2923,8 +2976,17 @@ ul.circle li {
   background-image: url(../images/vols/abu-tahir.jpeg);
 }
 
+#page .section-6 .volunteers .vl-i .person[data-fname="Ritesh"] .img {
+  background-image: url(../images/vols/ritesh.jpeg);
+}
 #page .section-6 .volunteers .vl-i .person[data-fname="Vivek Raja"] .img {
   background-image: url(../images/vols/vivek-raja.jpeg);
+}
+#page .section-6 .volunteers .vl-i .person[data-fname="VijayaNirmala"] .img {
+  background-image: url(../images/speakers/sessions/vijayanirmalakumar.png);
+}
+#page .section-6 .volunteers .vl-i .person[data-fname="Ramya"] .img {
+  background-image: url(../images/vols/ramya.jpeg);
 }
 
 #page .section-6 .volunteers .vl-i .person[data-fname="Sanchit"] .img {
@@ -2946,9 +3008,18 @@ ul.circle li {
 #page .section-6 .volunteers .vl-i .person[data-fname="Sabarinath"] .img {
   background-image: url(../images/vols/sabarinath.jpeg);
 }
-
+#page .section-6 .volunteers .vl-i .person[data-fname="Tajinder"] .img {
+  background-image: url(../images/vols/tajinder.jpeg);
+}
 #page .section-6 .volunteers .vl-i .person[data-fname="Parth Purvesh"] .img {
   background-image: url(../images/vols/parth-purvesh.jpeg);
+}
+#page .section-6 .volunteers .vl-i .person[data-fname="Piyush Jalan"] .img {
+  background-image: url(../images/vols/piyush.jpg);
+}
+
+#page .section-6 .volunteers .vl-i .person[data-fname="Vedant"] .img {
+  background-image: url(../images/vols/vedanth.jpeg);
 }
 
 #page .section-6 .volunteers .vl-i .person[data-fname="Vibhu"] .img {
@@ -2962,6 +3033,11 @@ ul.circle li {
 
 #page .section-6 .volunteers .vl-i .person[data-fname="Subhradip"] .img {
   background-image: url(../images/vols/subhradip.jpeg);
+}
+
+
+#page .section-6 .volunteers .vl-i .person[data-fname="Avinash"] .img {
+  background-image: url(../images/vols/avinash.jpeg);
 }
 
 #page .section-9 .ambassadors .vl-i .person[data-fname="Kumar"] .img {
@@ -3400,7 +3476,7 @@ ul.circle li {
 
   /* line 1216, ../sass/shared/_home.scss */
   #page .section-tickets .row>div {
-    width: calc(50% - 15px / 2);
+    /* width: calc(50% - 15px / 2); */
     margin-bottom: 15px;
     padding: 0;
   }
@@ -3408,13 +3484,13 @@ ul.circle li {
   /* line 1220, ../sass/shared/_home.scss */
   #page .section-tickets .row>div:nth-child(1) {
     order: 1;
-    margin-right: 13px;
+    /* margin-right: 13px; */
   }
 
   /* line 1224, ../sass/shared/_home.scss */
   #page .section-tickets .row>div:nth-child(2) {
     order: 3;
-    margin-right: 15px;
+    /* margin-right: 15px; */
   }
 
   /* line 1228, ../sass/shared/_home.scss */
@@ -3463,16 +3539,16 @@ ul.circle li {
 
 /* line 1263, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_1 .bg_img {
-  background-image: url(../images/Amazon-Elastic-Container.png);
+  background-image: url(../images/workshop/serverless.svg);
 }
 
 /* line 1268, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_2 .bg_img {
-  background-image: url(../images/Machine-Learning.svg);
+  background-image: url(../images/workshop/data-analytics.png);
 }
 
 #page .section-tickets .card.with_icon.tick_work_3 .bg_img {
-  background-image: url(../images/AWS-Lambda.svg);
+  background-image: url(../images/workshop/aiml.svg);
 }
 
 #page .section-tickets .card.with_icon.tick_work_4 .bg_img {
@@ -3762,6 +3838,18 @@ i.icon.large {
   margin-left: 5px;
 }
 
+
+.register-form-submit-btn {
+  background: #ff9900;
+  color: #fff;
+}
+
+.register-form-submit-btn:hover,
+.register-form-submit-btn:focus {
+color: #fff;
+border: none;
+}
+
 .btn-outline:hover {
   border: 1px solid #eea236;
   background: #eea236;
@@ -3784,6 +3872,7 @@ i.icon.large {
 
 
 /* register form css */
+
 .register-form-close-btn {
   display: flex;
   position: fixed;
@@ -4295,6 +4384,7 @@ input:valid~label {
 .workshop_modal #page .section-tickets {
   background: rgb(255, 255, 255);
   padding: 10px 0px;
+  overflow-y: auto;
 }
 
 .check-cloud {
@@ -4308,18 +4398,35 @@ input:valid~label {
   color: #111;
 }
 
+#page .section-5 .sponsors .cats .flex-it .f1 .sponsor {
+  border: none;
+  height: 50px !important;
+}
+
+
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).re-skill {
   background-image: url(https://awsreskill.com/logos/logo-black.svg?v=1);
 }
 
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).docker-bglore {
-  background-image: url(../images/spons/dockerBglore.jpeg);
+  background-image: url(../images/community-partners/dockerBglore.jpeg);
+}
+#page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).js-lovers {
+  background-image: url(../images/community-partners/jslovers.jpg);
 }
 
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).PyLadies {
-  background-image: url(../images/spons/pyladies.jpeg);
+  background-image: url(../images/community-partners/pyladies.jpeg);
 }
-
+#page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).cloud-tech {
+  background-image: url(../images/community-partners/cloudTech.jpeg);
+}
+#page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).DevOps-Community {
+  background-image: url(../images/community-partners/devops.svg);
+}
+#page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).Keep-Up {
+  background-image: url(../images/community-partners/keep-up.png);
+}
 #page .section-5 .sponsors .cats .flex-it .f1>div:not(.head).collabnix {
   background-image: url(../images/spons/collabnix.jpeg);
   background-size: cover;
