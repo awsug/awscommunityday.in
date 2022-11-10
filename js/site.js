@@ -575,3 +575,9 @@ const showAndHideValueSuccess = (key, msg) => {
     });
   });
 });
+
+function changeTrack(track, track1color, track2color){
+  document.getElementById("livetrack").src = track; 
+  document.getElementById("track1btn").style.background = track1color;     
+  document.getElementById("track2btn").style.background = track2color;
+}
