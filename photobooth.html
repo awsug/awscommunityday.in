@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AWS Community Day India 2022 | Virtual Photobooth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="msapplication-config" content="images/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta property="og:url" content="https://communityday.awsug.in" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AWS Community Day India 2022" />
+  <meta property="og:description"
+    content="AWS Community Day India 2022 is being organized by AWS User Group India. We're united by community-led learnings and diversified by the wide variety of tools and technologies closely knit with Amazon Web Services." />
+
+  <meta property="og:image" content="/images/awscommunityday-blacknwhite.png" />
+  <meta property="og:image:secure_url" content="https://communityday.awsug.in/images/aws-india-group.png" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@awsug">
+  <meta name="twitter:creator" content="@awsugindia">
+  <meta name="twitter:title" content="AWS Users Group India">
+  <meta name="twitter:description"
+    content="AWS User Group India is volunteer driven, group of passionate Amazon Web Services (aka AWS) {Developers, Architects, Users, Evangelists} who meet to {share best practices, discuss up coming features, pit falls, etc} in India.">
+  <meta name="twitter:image" content="https://communityday.awsug.in/images/aws-india-group.png">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheets/intlTelInput.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="2018/assets/css/style1.css"> -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/photobooth.css" /> 
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script type="text/javascript" src="js/canvas2image.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171268306-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-171268306-1');
+  </script>
+  <!-- This line is required for side sharethis-inline-share-buttons -->
+     <link rel="manifest" href="/manifest.json" />
+  
+   
+</head>
+
+<body>
+ 
+  <div id="page">
+    <div class="section section-1 hdr" id="home">
+        <div class="content">
+            <div id="logo"  >
+                <a href="index.html" class="scrollto"><img src="images/awscommunityday-blacknwhite.png" alt="" title=""></a>
+              </div>
+        </div>
+       
+        <div class= "container" >
+            <h1 class="heading-ttl">Download Your<br><span>Participation</span> Badge</h1>
+        </div>
+        <div class="photo_upload" >
+            <div id="bphoto">
+              <h2 style="color: #ff9900"><b>Click your picture with ACD frame and share it on Social Media. <br>Also, make sure to tag us @awsugindia and use the hashtag "#acd2022"</b></h2>
+              
+              <div class="card cardwp" id="card1">
+             
+                <div class="card-body"> 
+                    <video id="video" width="320" height="240" autoplay></video>
+                </div>
+              </div>
+              <div> 
+                <button id="start-camera" style="display: none;">Start Camera</button>
+                <button  id="click-photo" "="">Download</button>
+              </div>
+            </div>
+            <div id="bnophoto" style="width:0;height:0;overflow: hidden">
+              
+              <div class="card cardwop"  id="photoframe" crossorigin="anonymous">
+              
+                <div class="card-body">  
+                    <canvas id="canvas" width="320" height="240"  class="galleryImage"></canvas>
+                </div>
+              </div>
+              <div>
+                <!-- <button onclick="takeshot()">
+                    Download
+                </button> -->
+              </div>
+            </div>
+          </div>
+   
+    </div> 
+  
+
+
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+
+  </div>
+ 
+
+ 
+ 
+
+
+  
+  <script type="text/javascript" src="js/photobooth.js"></script>
+</body>
+
+</html>

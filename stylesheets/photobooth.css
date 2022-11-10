@@ -1,0 +1,92 @@
+#logo {
+    width: 8em;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+} 
+ 
+.framebg{
+    background: url(../images/acd_photobooth_frame.jpeg) no-repeat; 
+    margin: auto;
+    box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
+    overflow: hidden;
+    width: 22em;
+    height: 28em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #fff !important;
+    /* margin: 2em auto; */
+    z-index: 100;
+  }
+  video{ 
+    object-fit: cover;
+    margin-top: 35px;
+    margin-left: 5px;
+    padding: 10px;
+    cursor: move;
+    width: 278px;
+    height: 313px;
+  }
+  #canvas{
+    object-fit: cover;
+    margin-top: 36px;
+    margin-left: 5px;
+    padding: 10px;
+    cursor: move;
+    width: 279px;
+    height: 312px;
+  }
+
+  .photo_upload {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 1em;
+}
+
+/* ----------------  card  ------------------- */
+.card {
+	margin: auto;
+	background-image: url('../images/photobooth_frame.png');
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	width: 350px;
+	height: 450px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	color: #fff !important;
+	margin: 2em auto;
+	z-index: 100;
+}
+
+.card-header {
+	width: 250px;
+
+	margin: 0.3em auto;
+}
+
+.card-header img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px; 
+}
+.photo_upload > div {
+    margin: 2em;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    margin-top: 1px;
+}
