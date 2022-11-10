@@ -86,8 +86,7 @@
 .photo_upload > div {
     margin: 2em;
     text-align: center;
-    padding-top: 22px;
     box-sizing: border-box;
     color: #fff;
-    /* min-width: 350px; */
-    /* height: 370px; */
+    margin-top: 1px;
+}
