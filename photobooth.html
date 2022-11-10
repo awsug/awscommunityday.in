@@ -44,7 +44,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/photobooth.css" /> 
-  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script type="text/javascript" src="js/canvas2image.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -74,9 +74,10 @@
         <div class= "container" >
             <h1 class="heading-ttl">Download Your<br><span>Participation</span> Badge</h1>
         </div>
-        <div class="photo_upload">
+        <div class="photo_upload" >
             <div id="bphoto">
-               
+              <h2 style="color: orange"><b>Take a photo and share it on social media. <br>Don't forget to tag the social handle @awsugindia.</b></h2>
+              
               <div class="card cardwp" id="card1">
              
                 <div class="card-body"> 
@@ -85,7 +86,7 @@
               </div>
               <div> 
                 <button id="start-camera" style="display: none;">Start Camera</button>
-                <button  id="click-photo" "="">Click me</button>
+                <button  id="click-photo" "="">Download</button>
               </div>
             </div>
             <div id="bnophoto">
@@ -97,9 +98,9 @@
                 </div>
               </div>
               <div>
-                <button onclick="takeshot()">
+                <!-- <button onclick="takeshot()">
                     Download
-                </button>
+                </button> -->
               </div>
             </div>
           </div>

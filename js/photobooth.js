@@ -9,19 +9,6 @@ var constraints = {
         facingMode: 'user'
     }
 }
-camera_button.addEventListener('click', async function() {
-   	let stream = await navigator.mediaDevices.getUserMedia(constraints);
-	video.srcObject = stream;
-});
-camera_button.click();
-click_button.addEventListener('click', function() {
-   	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-   	let image_data_url = canvas.toDataURL('image/jpeg'); 
-
-   	// data url of the image
-   //	console.log(image_data_url);
-});
-
 function takeshot() {
   
     let div =
@@ -29,7 +16,8 @@ function takeshot() {
      
   
     html2canvas(div,{ 
-        scale:3
+        scale:3,
+        allowTaint: true
       }).then(
         
         function (canvas) {
@@ -38,3 +26,16 @@ function takeshot() {
         })
    
 }
+camera_button.addEventListener('click', async function() {
+   	let stream = await navigator.mediaDevices.getUserMedia(constraints);
+	video.srcObject = stream;
+});
+camera_button.click();
+click_button.addEventListener('click', function() {
+   	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+   	let image_data_url = canvas.toDataURL('image/jpeg', 1.0); 
+    takeshot();
+   	// data url of the image
+   //	console.log(image_data_url);
+});
+
