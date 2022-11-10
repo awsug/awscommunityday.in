@@ -16,7 +16,7 @@ camera_button.addEventListener('click', async function() {
 camera_button.click();
 click_button.addEventListener('click', function() {
    	canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-   	let image_data_url = canvas.toDataURL('image/jpeg');
+   	let image_data_url = canvas.toDataURL('image/jpeg'); 
 
    	// data url of the image
    //	console.log(image_data_url);
@@ -26,8 +26,11 @@ function takeshot() {
   
     let div =
         document.getElementById('photoframe'); 
+     
   
-    html2canvas(div).then(
+    html2canvas(div,{ 
+        scale:3
+      }).then(
         
         function (canvas) {
             

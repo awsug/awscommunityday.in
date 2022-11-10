@@ -30,12 +30,12 @@
   }
   #canvas{
     object-fit: cover;
-    margin-top: 39px;
+    margin-top: 36px;
     margin-left: 5px;
-    padding: 10px; 
-    cursor: move; 
-    width: 276px;
-    height: 308px;
+    padding: 10px;
+    cursor: move;
+    width: 279px;
+    height: 312px;
   }
 
   .photo_upload {
