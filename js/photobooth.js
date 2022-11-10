@@ -16,7 +16,7 @@ function takeshot() {
      
   
     html2canvas(div,{ 
-        scale:3,
+        dpi: 144,
         allowTaint: true
       }).then(
         
